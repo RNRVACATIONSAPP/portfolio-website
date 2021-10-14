@@ -1,3 +1,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-HelveticaNeue;
+  }
+  @font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/HelveticaNeue-Medium.woff2") format("woff2"),
+      url("/fonts/HelveticaNeue-Medium.woff") format("woff"),
+      url("/fonts/HelveticaNeue-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/HelveticaNeue-Light.woff2") format("woff2"),
+      url("/fonts/HelveticaNeue-Light.woff") format("woff"),
+      url("/fonts/HelveticaNeue-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/HelveticaNeue-Bold.woff2") format("woff2"),
+      url("/fonts/HelveticaNeue-Bold.woff") format("woff"),
+      url("/fonts/HelveticaNeue-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/HelveticaNeue-Roman.woff2") format("woff2"),
+      url("/fonts/HelveticaNeue-Roman.woff") format("woff"),
+      url("/fonts/HelveticaNeue-Roman.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Bulgari";
+    src: url("/fonts/Bulgari-Regular.woff2") format("woff2"),
+      url("/fonts/Bulgari-Regular.woff") format("woff"),
+      url("/fonts/Bulgari-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@layer components {
+  .section {
+    @apply px-[30px] py-[60px] w-full;
+  }
+
+  .navBtn {
+    @apply text-[14px] font-medium hover:text-gray-500 transition-colors duration-200 ease-linear uppercase cursor-pointer;
+  }
+
+  .navBtnMenuOpen {
+    @apply text-[13vw] opacity-100 leading-snug tracking-widest font-medium hover:text-white transition-all duration-300 ease-linear uppercase cursor-pointer hover:translate-x-1;
+  }
+
+  .navBtnUnderlineMobile {
+    @apply p-[.1px] w-full bg-white
+  }
+  .navBtnUnderlineDesktop {
+    @apply h-[.1px] group-hover:w-full bg-black w-0 absolute bottom-0 right-0 transition-all duration-300
+  }
+
+  .navBtnMenuClosed {
+    @apply transform -translate-x-20 opacity-0 duration-500;
+  }
+
+  .textOutline {
+    -webkit-text-stroke: 2px white;
+    text-stroke: 2px white;
+  }
+
+  .container {
+    @apply max-w-[1200px] mx-auto;
+  }
+}
