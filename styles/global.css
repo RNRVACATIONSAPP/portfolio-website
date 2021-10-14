@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-HelveticaNeue bg-white text-black;
+    @apply font-HelveticaNeue bg-white  text-black;
   }
 
   @font-face {
@@ -95,7 +95,7 @@
   }
 
   .heroImageDimensions {
-    @apply max-w-[357px]  sm:max-w-[397px] sm:min-h-[527px];
+    @apply w-full xs:max-w-[330px] sm:max-w-[359px] md:max-w-[367px] lg:max-w-[397px]   xl:min-h-[527px];
   }
 
   /* UTILITIES CLASSES */
