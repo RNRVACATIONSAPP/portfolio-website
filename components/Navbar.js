@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { MenuAlt3Icon, XIcon } from "@heroicons/react/solid";
 import { useState } from "react";
-import Link from "next/Link";
+import Link from "next/link";
 function Navbar(props) {
   const [navOpen, setNavOpen] = useState(false);
 
