@@ -1,6 +1,11 @@
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  purge: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./layout/**/*.{js,ts,jsx,tsx}",
+    "./helpers/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -9,20 +14,40 @@ module.exports = {
         HelveticaNeue: ["Helvetica Neue", "sans-serif"],
       },
     },
+    screens: {
+      xs: "480px",
+      // => @media (min-width: 480px) { ... }
+
+      sm: "640px",
+      // => @media (min-width: 640px) { ... }
+
+      md: "768px",
+      // => @media (min-width: 768px) { ... }
+
+      lg: "1024px",
+      // => @media (min-width: 1024px) { ... }
+
+      xl: "1280px",
+      // => @media (min-width: 1280px) { ... }
+
+      "2xl": "1536px",
+      // => @media (min-width: 1536px) { ... }
+    },
   },
-  pseudo: { // defaults to {'before': 'before', 'after': 'after'}
-    'before': 'before',
-    'after': 'after',
-    'not-first': 'not(:first-child)',
+  pseudo: {
+    // defaults to {'before': 'before', 'after': 'after'}
+    before: "before",
+    after: "after",
+    "not-first": "not(:first-child)",
   },
   variants: {
-    empty: ['before', 'after'],
+    empty: ["before", "after"],
   },
   plugins: [
     require("tailwind-scrollbar"),
     require("tailwind-scrollbar-hide"),
     require("@tailwindcss/forms"),
-    require('tailwindcss-pseudo')({
+    require("tailwindcss-pseudo")({
       empty: true, // defaults to true
     }),
   ],

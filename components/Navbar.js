@@ -14,14 +14,14 @@ function Navbar(props) {
   };
 
   return (
-    <nav className="relative">
-      <div className="flex justify-between px-[30px] pt-[60px]  max-w-[1200px] mx-auto place-items-center">
+    <nav className="relative overflow-hidden">
+      <div className="flex justify-between px-[30px] pt-[43px] my-container mx-auto place-items-center">
         {/* LOGO */}
-        <div className=" group relative">
+        <div className="flex flex-col group relative">
           <Link href="/">
             <a className="navBtn font-bold text-xl mb-[.5px]">T.TAYLOR</a>
           </Link>
-          <p className="navBtnUnderlineDesktop "></p>
+          <p className="navBtnUnderlineDesktop"></p>
         </div>
         {/* Desktop Nav Links */}
         <div className="hidden sm:flex justify-between space-x-4">
@@ -35,7 +35,7 @@ function Navbar(props) {
             <Link href="/About">
               <a className="navBtn">Projects</a>
             </Link>
-            <p className="navBtnUnderlineDesktop "></p>
+            <p className="navBtnUnderlineDesktop"></p>
           </div>
           <div className="flex flex-col group relative">
             <Link href="/About">
@@ -48,9 +48,9 @@ function Navbar(props) {
         <div
           className={`${
             navOpen
-              ? "h-screen w-screen px-[30px] py-[60px] "
+              ? "h-screen w-screen px-[30px] py-[43px]"
               : "h-0 w-screen transform -translate-y-10"
-          } fixed left-0 top-0  flex flex-col overflow-hidden transition-all duration-500 bg-black sm:hidden`}
+          } fixed left-0 top-0  flex flex-col overflow-hidden transition-all duration-500 z-20 bg-black sm:hidden`}
         >
           <Link href="/">
             <div className="flex-[20vw]">
@@ -145,7 +145,7 @@ function Navbar(props) {
             navOpen
               ? "opacity-100 pointer-events-auto "
               : "opacity-0 animate-spin pointer-events-none"
-          }  absolute inline-block right-[30px] bottom-[.01px] navBtn w-8 object-contain text-white transition-all duration-500 sm:hidden `}
+          }  absolute z-20 inline-block right-[30px] bottom-[.01px] navBtn w-8 object-contain text-white transition-all duration-500 sm:hidden `}
         />
         <MenuAlt3Icon
           onClick={isMenuOpen}
@@ -153,7 +153,7 @@ function Navbar(props) {
             navOpen
               ? "opacity-0 animate-spin pointer-events-none"
               : "opacity-100 pointer-events-auto"
-          }   absolute inline-block  right-[30px] bottom-[.01px] navBtn w-8 object-contain transition-all duration-500 sm:hidden`}
+          }   absolute z-20 inline-block  right-[30px] bottom-[.01px] navBtn w-8 object-contain transition-all duration-500 sm:hidden`}
         />
       </div>
     </nav>
