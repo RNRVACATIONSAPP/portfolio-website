@@ -21,17 +21,17 @@ function Hero(props) {
   }
 
   return (
-    <section className="section  h-screen my-container ">
+    <section className="section h-screen my-container ">
       <div className="relative flex flex-col w-full h-full">
         <div className="flex justify-center place-items-center w-full flex-1 relative">
-      
+
           <img
-            className=" heroImageDimensions relative left-[48%] xs:left-[9.5em] md:left-[15em] lg:left-[9.5em] shadow-2xl object-cover pointer-events-none"
+            className=" heroImageDimensions relative left-[48%] xs:left-[9.5em] md:left-[15em] lg:left-[9.5em] shadow-2xl object-cove pointer-events-none"
             src="/images/KNSTNTIN.jpg"
             alt="Hero image"
           />
           <img
-            className=" heroImageDimensions relative right-[48%] xs:right-[9.5em] md:right-[15em] lg:right-[9.5em] shadow-2xl object-cover pointer-events-none"
+            className=" heroImageDimensions relative right-[48%] xs:right-[9.5em] md:right-[15em] lg:right-[9.5em] shadow-2xl object-cove pointer-events-none"
             src="/images/KNSTNTIN.jpg"
             alt="Hero image"
           />
@@ -52,7 +52,7 @@ function Hero(props) {
           LOVE FOR CREATING
         </h2>
 
-        <div className="relative bottom-0 flex uppercase justify-between text-[15px] mb-10 mt-[86px] font-bold tracking-[.100em]">
+        <div className="relative bottom-0 flex justify-between place-items-center text-[15px] uppercase mb-10 mt-[86px] font-bold tracking-[.100em]">
           <h2>SCROLL MORE</h2>
           <ChevronDownIcon className="w-8 animate-bounce opacity-[14%] cursor-pointer" />
           <h2>LDN / NRW</h2>

@@ -79,14 +79,14 @@
   }
 
   .navBtnUnderlineMobile {
-    @apply p-[.1px] w-full bg-white;
+    @apply p-[.5px] w-full bg-white opacity-80;
   }
   .navBtnUnderlineDesktop {
-    @apply h-[.1px] group-hover:w-full bg-black w-0 absolute bottom-0 right-0 transition-all duration-300;
+    @apply h-[.5px] group-hover:w-full group-hover:left-0 bg-black w-0 absolute bottom-0 right-0 transition-all duration-300;
   }
 
   .navBtnMenuClosed {
-    @apply transform -translate-x-20 opacity-0 duration-500;
+    @apply transform -translate-x-20 opacity-0 duration-500 ;
   }
 
   .textOutline {

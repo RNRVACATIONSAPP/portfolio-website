@@ -10,7 +10,7 @@ export default function Home() {
         <title>TINO TAYLOR</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="fixed  minusIndex h-screen w-screen opacity-[22%] pointer-events-none">
+      <div className="fixed prevminusIndex z-10 h-screen w-screen opacity-[10%] pointer-events-none">
         <Image
           src="/images/grain-overlay.jpg"
           layout="fill"

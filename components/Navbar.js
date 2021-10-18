@@ -14,10 +14,10 @@ function Navbar(props) {
   };
 
   return (
-    <nav className="relative">
+    <nav className="relative overflow-hidden">
       <div className="flex justify-between px-[30px] pt-[43px] my-container mx-auto place-items-center">
         {/* LOGO */}
-        <div className="group relative">
+        <div className="flex flex-col group relative">
           <Link href="/">
             <a className="navBtn font-bold text-xl mb-[.5px]">T.TAYLOR</a>
           </Link>
