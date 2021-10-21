@@ -14,8 +14,8 @@ function Hero(props) {
   }, []);
 
   return (
-    <section className="h-screen ">
-      <div
+    <header className="h-screen">
+      <article
         style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
         className="fixed z-[2] section pt-[120px] top-0 left-0  h-full w-full bg-[#dad6cd]"
       >
@@ -37,29 +37,33 @@ function Hero(props) {
                 src="/images/KNSTNTIN.jpg"
                 alt="Hero image"
               />
-              <h1  className="absolute ml-3 font-Bulgari text-center tracking-[.110em] leading-[130px] max-w-[790px] text-white mix-blend-difference text-[15vw]  md:text-[120px] lg:text-[140px] xl:text-[150px] pointer-events-none">
+              <h1 className="absolute ml-3 font-Bulgari text-center tracking-[.110em] leading-[130px] max-w-[790px] text-white mix-blend-difference text-[15vw]  md:text-[120px] lg:text-[140px] xl:text-[150px] pointer-events-none">
                 CREATIVE DEVELOPER
               </h1>
             </div>
+            <aside>
+              <h3 className="hidden absolute uppercase left-2 top-1/2 translate-y-1/2 text-[15px] font-bold tracking-[.100em] transform  origin-left -rotate-90 xs:block">
+                LOVE FOR CREATING
+              </h3>
+              <h3 className="hidden absolute uppercase right-2 top-1/2 translate-y-1/2  text-[15px] font-bold tracking-[.100em] transform origin-right rotate-90 xs:block">
+                LOVE FOR CREATING
+              </h3>
+            </aside>
 
-            <h3 className="hidden absolute uppercase left-2 top-1/2 translate-y-1/2 text-[15px] font-bold tracking-[.100em] transform  origin-left -rotate-90 xs:block">
-              LOVE FOR CREATING
-            </h3>
-            <h3 className="hidden absolute uppercase right-2 top-1/2 translate-y-1/2  text-[15px] font-bold tracking-[.100em] transform origin-right rotate-90 xs:block">
-              LOVE FOR CREATING
-            </h3>
-
-            <div style={{ transform: `translateY(-${offsetY * 0.3}px)` }} className="relative z-[1] bottom-0 flex justify-between place-items-center text-[15px] uppercase  mt-[86px] font-bold tracking-[.100em]">
+            <aside
+              style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+              className="relative z-[1] bottom-0 flex justify-between place-items-center text-[15px] uppercase  mt-[86px] font-bold tracking-[.100em]"
+            >
               <h3>SCROLL DOWN</h3>
               <a href="#about">
                 <ChevronDownIcon className="w-8 animate-bounce opacity-[14%] cursor-pointer" />
               </a>
               <h3>LDN / NRW</h3>
-            </div>
+            </aside>
           </div>
         </div>
-      </div>
-    </section>
+      </article>
+    </header>
   );
 }
 
