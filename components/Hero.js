@@ -14,10 +14,10 @@ function Hero(props) {
   }, []);
 
   return (
-    <section className="h-auto xs:h-screen ">
+    <section className="h-screen ">
       <div
         style={{ transform: `translateY(-${offsetY * 0.5}px)` }}
-        className="fixed z-[1] section pt-[120px] top-0 left-0  h-full w-full bg-[#dad6cd]"
+        className="fixed z-[2] section pt-[120px] top-0 left-0  h-full w-full bg-[#dad6cd]"
       >
         <div className="h-full relative">
           <div className="my-container h-full relative flex flex-col">
@@ -28,7 +28,7 @@ function Hero(props) {
                 alt="Hero image"
               />
               <img
-                className=" heroImageDimensions relative right-[48%] xs:right-[9.5em] md:right-[15em] lg:right-[9.5em] shadow-2xl object-cove pointer-events-none"
+                className="heroImageDimensions relative right-[48%] xs:right-[9.5em] md:right-[15em] lg:right-[9.5em] shadow-2xl object-cove pointer-events-none"
                 src="/images/KNSTNTIN.jpg"
                 alt="Hero image"
               />
@@ -50,7 +50,7 @@ function Hero(props) {
             </h3>
 
             <div style={{ transform: `translateY(-${offsetY * 0.3}px)` }} className="relative z-[1] bottom-0 flex justify-between place-items-center text-[15px] uppercase  mt-[86px] font-bold tracking-[.100em]">
-              <h3>SCROLL MORE</h3>
+              <h3>SCROLL DOWN</h3>
               <a href="#about">
                 <ChevronDownIcon className="w-8 animate-bounce opacity-[14%] cursor-pointer" />
               </a>
@@ -59,11 +59,6 @@ function Hero(props) {
           </div>
         </div>
       </div>
-      <Img
-        src="https://media.giphy.com/media/CFap2Z7qG27aCldDav/giphy.gif"
-        layout="fill"
-        className="opacity-[0.011] z-[1] w-full pointer-events-none"
-      />
     </section>
   );
 }

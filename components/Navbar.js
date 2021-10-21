@@ -21,7 +21,7 @@ function Navbar(props) {
     } else {
       document.querySelector("body").style.overflowY = "scroll";
     }
-  }, [isMenuOpen])
+  }, [isMenuOpen]);
 
   // PARALLAX
 
@@ -34,33 +34,37 @@ function Navbar(props) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
-    <nav className="absolute w-screen px-[30px] pt-[43px] z-[3] overflow-hidden">
+    <nav
+
+      className={`absolute w-screen transition-all duration-300 h-screen pointer-events-none px-[30px] pt-[43px] z-[3] overflow-hidden `}
+    >
       <div className="relative">
-        <div className="flex justify-between  my-container mx-auto place-items-center">
+        <div className="flex justify-between my-container mx-auto place-items-center">
           {/* LOGO */}
-          <div className="flex flex-col group relative">
+          <div className="flex flex-col group relative pointer-events-auto">
             <Link href="/">
-              <a className="navBtn font-bold text-xl mb-[.5px]">T.TAYLOR</a>
+              <a className="navBtn font-bold text-xl mb-[.5px] ">
+                T.TAYLOR
+              </a>
             </Link>
             <p className="navBtnUnderlineDesktop"></p>
           </div>
           {/* Desktop Nav Links */}
-          <div className="hidden sm:flex justify-between space-x-4">
-            <div className="flex flex-col group relative">
+          <div className="hidden sm:flex justify-between space-x-4 z-[3]">
+            <div className="flex flex-col group relative pointer-events-auto">
               <Link href="#about">
                 <a className="navBtn">About</a>
               </Link>
-              <p className="navBtnUnderlineDesktop "></p>
+              <p className="navBtnUnderlineDesktop"></p>
             </div>
-            <div className="flex flex-col group relative">
+            <div className="flex flex-col group relative pointer-events-auto">
               <Link href="/About">
                 <a className="navBtn">Projects</a>
               </Link>
               <p className="navBtnUnderlineDesktop"></p>
             </div>
-            <div className="flex flex-col group relative">
+            <div className="flex flex-col group relative pointer-events-auto">
               <Link href="/About">
                 <a className="navBtn">contact</a>
               </Link>
@@ -71,9 +75,9 @@ function Navbar(props) {
           <div
             className={`${
               navOpen
-                ? "h-screen w-screen px-[30px] py-[43px]"
-                : "h-0 w-screen transform -translate-y-10"
-            } fixed left-0 top-0  flex flex-col overflow-hidden transition-all duration-500 z-20 bg-black sm:hidden`}
+                ? "h-screen w-screen px-[30px] py-[43px] pointer-events-auto"
+                : "h-0 w-screen transform -translate-y-10 pointer-events-none"
+            } fixed left-0 top-0 flex flex-col overflow-hidden transition-all duration-500 z-20 bg-black sm:hidden`}
           >
             <Link href="/">
               <div className="flex-[20vw]">
