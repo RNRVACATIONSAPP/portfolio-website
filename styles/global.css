@@ -4,7 +4,23 @@
 
 @layer base {
   body {
-    @apply font-HelveticaNeue bg-white  text-black;
+    @apply font-HelveticaNeue bg-[#f2f2f2]  text-black scrollbar-none scrollbar-thumb-transparent ;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h2 {
+    @apply text-[24px] xs:text-[28px] tracking-[.100em] leading-[39px] font-bold;
+  }
+
+  p {
+    @apply text-[16px] font-light leading-[39px];
+  }
+
+  button {
+    @apply text-[15px] font-bold tracking-[.100em] leading-[39px];
   }
 
   @font-face {
@@ -68,8 +84,53 @@
 }
 
 @layer components {
+  /* .grain-animation {
+    animation: grain 15s steps(10) infinite;
+    height: 200%;
+    left: -50%;
+    opacity: 3%;
+    position: fixed;
+    z-index: 999;
+    top: -100%;
+    width: 200%;
+  }
+
+  @keyframes grain {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-5%, -10%);
+    }
+    20% {
+      transform: translate(-15%, 5%);
+    }
+    30% {
+      transform: translate(7%, -25%);
+    }
+    40% {
+      transform: translate(-5%, 25%);
+    }
+    50% {
+      transform: translate(-15%, 10%);
+    }
+    60% {
+      transform: translate(15%, 0%);
+    }
+    70% {
+      transform: translate(0%, 15%);
+    }
+    80% {
+      transform: translate(3%, 35%);
+    }
+    90% {
+      transform: translate(-10%, 10%);
+    }
+  } */
 
   /* NAVBAR CLASSES */
+
   .navBtn {
     @apply text-[14px] font-medium hover:text-gray-500 transition-colors duration-200 ease-linear uppercase cursor-pointer;
   }
@@ -86,7 +147,7 @@
   }
 
   .navBtnMenuClosed {
-    @apply transform -translate-x-20 opacity-0 duration-500 ;
+    @apply transform -translate-x-20 opacity-0 duration-500;
   }
 
   .textOutline {
@@ -108,7 +169,11 @@
   }
 
   .section {
-    @apply px-[30px] py-[60px] w-full;
+    @apply px-[30px] py-[30px] sm:py-[60px] w-full;
+  }
+
+  .hero-parallax {
+    background-attachment: fixed;
   }
 
   .my-container {
