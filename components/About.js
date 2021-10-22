@@ -3,6 +3,7 @@ import Link from "next/link";
 function About(props) {
   return (
     <section
+      data-scroll-section
       id="about"
       className="section z-[2] pt-[90px] shadow-2xl bg-[#f2f2f2] relative"
     >
@@ -18,7 +19,10 @@ function About(props) {
               voluptatem? Magnam magni, reiciendis quas error dolores nisi nemo
               deleniti.
             </p>
-            <button name="button" className="relative uppercase mt-[40px] lg:mt-[70px] group">
+            <button
+              name="button"
+              className="relative uppercase mt-[40px] lg:mt-[70px] group"
+            >
               <Link href="/">
                 <a>LEARN MORE</a>
               </Link>
