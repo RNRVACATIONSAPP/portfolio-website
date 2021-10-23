@@ -63,9 +63,10 @@
   }
 
   body {
-    @apply font-HelveticaNeue bg-[#f2f2f2]  text-black scrollbar-none scrollbar-thumb-transparent;
+    @apply font-HelveticaNeue bg-[#dad6cd]  text-black scrollbar-none scrollbar-thumb-transparent;
   }
 
+  /* bg-[#f2f2f2]  */
   h2 {
     @apply text-[24px] xs:text-[28px] tracking-[.100em] leading-[39px] font-bold;
   }
@@ -79,6 +80,10 @@
   }
 
   /*  locomotive-scroll v4.1.2 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+  html {
+    overflow: hidden;
+  }
+
   html.has-scroll-smooth {
     overflow: hidden;
   }
@@ -91,7 +96,7 @@
   }
 
   .has-scroll-smooth body {
-    overflow: hidden;
+    overflow: hidden !important;
   }
 
   .has-scroll-smooth [data-scroll-container] {

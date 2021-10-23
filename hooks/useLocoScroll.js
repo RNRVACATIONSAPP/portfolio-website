@@ -1,20 +1,21 @@
 import { useEffect } from "react";
 
-export default function useLocoScroll(start) {
-  if (typeof document !== "undefined") {
-    useEffect(() => {
-      if (!start) return;
-      let scroll;
-      import("locomotive-scroll").then((locomotiveModule) => {
-        scroll = new locomotiveModule.default({
-          el: document.querySelector("#main-container"),
-          smooth: true,
-          multiplier: 1,
-        });
+export default function useLocoScroll(navOpen) {
+  useEffect(() => {
+    let locoScroll = null;
+    async function getLocomotive() {
+      const Locomotive = (await import("locomotive-scroll")).default;
+      locoScroll = new Locomotive({
+        el: document.querySelector("#main-container"),
+        smooth: true,
+        tablet: { smooth: true },
+        smartphone: { smooth: true },
+        multiplier: 3,
       });
+      navOpen ? locoScroll.stop() : locoScroll.start();
+    }
+    getLocomotive();
 
-      return () => scroll.destroy();
-    }, [start]);
-  }
+    return () => locoScroll.destroy();
+  }, [navOpen]);
 }
-

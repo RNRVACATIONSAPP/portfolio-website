@@ -9,8 +9,6 @@ import useLocoScroll from "../hooks/useLocoScroll";
 export default function Home() {
   const [preloader, setPreloader] = useState(true);
 
-  useLocoScroll(preloader);
-
   return (
     <div data-scroll-container id="main-container">
       <Head>
