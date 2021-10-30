@@ -2,7 +2,6 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import SplitText from "../utils/Split3.min";
 import { gsap } from "gsap/dist/gsap";
 import { useEffect } from "react";
-import Navbar from "./Navbar";
 
 function Hero(props) {
   useEffect(() => {

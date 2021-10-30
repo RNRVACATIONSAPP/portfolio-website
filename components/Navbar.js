@@ -20,7 +20,7 @@ function Navbar(props) {
   // STOP SCROLL WHEN NAV IS OPEN
   useEffect(() => {
     if (navOpen === true) {
-      document.querySelector("body").style.overflowY = "hidden";
+      document.querySelector("body").style.overflow = "hidden !important";
     } else {
       document.querySelector("body").style.overflowY = "scroll";
     }
@@ -28,7 +28,7 @@ function Navbar(props) {
   return (
     <nav
       data-scroll-section
-      className="absolute w-screen px-[30px] z-[3] pt-[43px]"
+      className="absolute w-screen px-[30px] z-[10] pt-[43px]"
     >
       <div className="relative">
         <ul className="flex justify-between my-container mx-auto place-items-center">
@@ -48,13 +48,13 @@ function Navbar(props) {
               <p className="navBtnUnderlineDesktop"></p>
             </li>
             <li className="flex flex-col group relative pointer-events-auto">
-              <Link href="/About">
+              <Link href="/projects">
                 <a className="navBtn">Projects</a>
               </Link>
               <p className="navBtnUnderlineDesktop"></p>
             </li>
             <li className="flex flex-col group relative pointer-events-auto">
-              <Link href="/About">
+              <Link href="/contact">
                 <a className="navBtn">contact</a>
               </Link>
               <p className="navBtnUnderlineDesktop "></p>
@@ -85,7 +85,7 @@ function Navbar(props) {
                   <a
                     className={`${
                       navOpen ? "" : "navBtnMenuClosed"
-                    } navBtnMenuOpen textOutline`}
+                    } navBtnMenuOpen textOutlineWhite`}
                   >
                     About
                   </a>
@@ -97,7 +97,7 @@ function Navbar(props) {
                   <a
                     className={`${
                       navOpen ? "" : "navBtnMenuClosed"
-                    } navBtnMenuOpen textOutline`}
+                    } navBtnMenuOpen textOutlineWhite`}
                   >
                     Projects
                   </a>
@@ -109,7 +109,7 @@ function Navbar(props) {
                   <a
                     className={`${
                       navOpen ? "" : "navBtnMenuClosed"
-                    } navBtnMenuOpen textOutline`}
+                    } navBtnMenuOpen textOutlineWhite`}
                   >
                     Contact
                   </a>

@@ -3,14 +3,14 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Projects from "../components/Projects";
 import { useState } from "react";
-import useLocoScroll from "../hooks/useLocoScroll";
 
 export default function Home() {
   const [preloader, setPreloader] = useState(true);
 
   return (
-    <div data-scroll-container id="main-container">
+    <div className="h-full">
       <Head>
         <title>TINO TAYLOR</title>
         <link rel="icon" href="/favicon.ico" />
@@ -29,6 +29,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Projects />
     </div>
   );
 }
