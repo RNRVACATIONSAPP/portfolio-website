@@ -2,37 +2,38 @@ import PropTypes from "prop-types";
 import Navbar from "../components/Navbar";
 import ProjectItem from "../components/ProjectItem";
 import { useRef, useState, useEffect } from "react";
+import Image from 'next/image';
 
 const pageData = [
   {
     url: "/images/knstntin-coding.jpg",
     title: "KVALITET I ALT",
-    info: ["Translation", "Consulting", "Building Plans"],
+    info: ["Language Translations", "Building Consulting", ""],
   },
   {
     url: "/images/KNSTNTIN.jpg",
     title: "EVA EIK",
-    info: ["Healer", "Singer", "Songwriter"],
+    info: ["Spiritual Healer", "Songwriter Singer", "Life Coach"],
   },
   {
     url: "/images/knstntin-outdoors.jpg",
     title: "BORSCHT N TEARS",
-    info: ["Russian", "Restaurant", "Food", "Music"],
+    info: ["Russian restaurant", "Authentic Cuisine", "Live Music"],
   },
   {
     url: "/images/KNSTNTIN.jpg",
     title: "AIR BNB CLONE",
-    info: ["Healer", "Singer", "Songwriter"],
+    info: ["Spiritual Healer", "Songwriter Singer", "Life Coach"],
   },
   {
     url: "/images/knstntin-coding.jpg",
     title: "INSTAGRAM CLONE",
-    info: ["Translation", "Consulting", "Building Plans"],
+    info: ["Spiritual Healer", "Songwriter Singer", "Life Coach"],
   },
   {
     url: "/images/knstntin-outdoors.jpg",
     title: "NETFLIX CLONE",
-    info: ["Russian", "Restaurant", "Food", "Music"],
+    info: ["Spiritual Healer", "Songwriter Singer", "Life Coach"],
   },
 ];
 
@@ -89,11 +90,18 @@ function projects(props) {
   }, [scrollUpdate]);
 
   return (
-    <section className="">
+    <section data-scroll-section className="bg-[#dad6cd]">
+    <div className="fixed prevminusIndex z-10 h-screen w-screen opacity-[20%] pointer-events-none">
+        <Image
+          src="/images/grain-overlay.jpg"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
       <Navbar />
       <div
         ref={menuItems}
-        className="section py-0 pl-[10vw]  h-screen w-screen box-border overflow-auto my-container  mx-auto"
+        className="section py-0 pl-[10vw] h-screen w-screen box-border overflow-auto my-container  mx-auto"
       >
         {renderItems.map((project, index) => (
           <ProjectItem key={index} project={project} projectIndex={index} />
