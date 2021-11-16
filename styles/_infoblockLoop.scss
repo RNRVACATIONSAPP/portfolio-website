@@ -21,18 +21,18 @@
         }
     }
 
-    &.as-active {
-        @for $i from 0 through 6 {
-            p:nth-child(#{$i + 1}n) {
-                span {
-                    transition-delay:#{$i/10}s;
-                }
-            }
-        }
+    // &.as-active {
+    //     @for $i from 0 through 6 {
+    //         p:nth-child(#{$i + 1}n) {
+    //             span {
+    //                 transition-delay:#{$i/10}s;
+    //             }
+    //         }
+    //     }
 
-        span {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
+    //     span {
+    //         transform: translateY(0);
+    //         opacity: 1;
+    //     }
+    // }
 }
