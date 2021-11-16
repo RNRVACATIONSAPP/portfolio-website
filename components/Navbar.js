@@ -48,13 +48,13 @@ function Navbar(props) {
               <p className="navBtnUnderlineDesktop"></p>
             </li>
             <li className="flex flex-col group relative pointer-events-auto">
-              <Link href="/projects">
+              <Link href="/Projects">
                 <a className="navBtn">Projects</a>
               </Link>
               <p className="navBtnUnderlineDesktop"></p>
             </li>
             <li className="flex flex-col group relative pointer-events-auto">
-              <Link href="/contact">
+              <Link href="/Contact">
                 <a className="navBtn">contact</a>
               </Link>
               <p className="navBtnUnderlineDesktop "></p>
