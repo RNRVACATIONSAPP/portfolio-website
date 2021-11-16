@@ -93,7 +93,7 @@ function Navbar(props) {
                 <p className="navBtnUnderlineMobile"></p>
               </li>
               <li className="flex flex-col">
-                <Link href="/About">
+                <Link href="/Projects">
                   <a
                     className={`${
                       navOpen ? "" : "navBtnMenuClosed"
@@ -105,7 +105,7 @@ function Navbar(props) {
                 <p className="navBtnUnderlineMobile"></p>
               </li>
               <li className="flex flex-col">
-                <Link href="/About">
+                <Link href="/Contact">
                   <a
                     className={`${
                       navOpen ? "" : "navBtnMenuClosed"
