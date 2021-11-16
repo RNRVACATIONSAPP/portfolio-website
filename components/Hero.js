@@ -16,16 +16,16 @@ function Hero(props) {
     });
 
     gsap.to(split.lines, {
-      duration: 1.2,
+      duration: 1.5,
       y: 0,
       opacity: 1,
       stagger: 0.2,
-      ease: "powe2",
+      ease: "power2",
     });
   }, []);
 
   return (
-    <header data-scroll-section className="h-screen">
+    <header data-scroll-section className="relative h-screen">
       <article className="z-[2] section pt-[120px] top-0 left-0  h-full w-full bg-[#dad6cd]">
         <div className="h-full relative">
           <div className="my-container h-full relative flex flex-col ">

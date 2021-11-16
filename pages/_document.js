@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head/>
-        <body id="#my-scroll">
+        <body>
           <Main />
           <NextScript />
         </body>

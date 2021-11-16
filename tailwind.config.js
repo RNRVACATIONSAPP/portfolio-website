@@ -34,21 +34,11 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
   },
-  pseudo: {
-    // defaults to {'before': 'before', 'after': 'after'}
-    before: "before",
-    after: "after",
-    "not-first": "not(:first-child)",
-  },
-  variants: {
-    empty: ["before", "after"],
-  },
+
   plugins: [
-    require("tailwind-scrollbar"),
-    require("tailwind-scrollbar-hide"),
     require("@tailwindcss/forms"),
-    require("tailwindcss-pseudo")({
-      empty: true, // defaults to true
-    }),
+    require("tailwindcss"),
+    require("precss"),
+    require("autoprefixer"),
   ],
 };

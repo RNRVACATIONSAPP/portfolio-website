@@ -15,20 +15,22 @@ function Navbar(props) {
     }
   };
 
-  useLocoScroll(navOpen);
-
   // STOP SCROLL WHEN NAV IS OPEN
+
+  
   useEffect(() => {
     if (navOpen === true) {
-      document.querySelector("body").style.overflow = "hidden !important";
+
     } else {
       document.querySelector("body").style.overflowY = "scroll";
     }
   }, [isMenuOpen]);
+
   return (
     <nav
       data-scroll-section
-      className="absolute w-screen px-[30px] z-[10] pt-[43px]"
+
+      className={`absolute top-0 w-screen ${navOpen? "h-screen" : "h-auto"} transition-all duration-300 pointer-events-none px-[30px] pt-[43px] z-[34] overflow-hidden `}
     >
       <div className="relative">
         <ul className="flex justify-between my-container mx-auto place-items-center">
@@ -48,13 +50,13 @@ function Navbar(props) {
               <p className="navBtnUnderlineDesktop"></p>
             </li>
             <li className="flex flex-col group relative pointer-events-auto">
-              <Link href="/projects">
+              <Link href="/About">
                 <a className="navBtn">Projects</a>
               </Link>
               <p className="navBtnUnderlineDesktop"></p>
             </li>
             <li className="flex flex-col group relative pointer-events-auto">
-              <Link href="/contact">
+              <Link href="/About">
                 <a className="navBtn">contact</a>
               </Link>
               <p className="navBtnUnderlineDesktop "></p>
@@ -85,7 +87,7 @@ function Navbar(props) {
                   <a
                     className={`${
                       navOpen ? "" : "navBtnMenuClosed"
-                    } navBtnMenuOpen textOutlineWhite`}
+                    } navBtnMenuOpen textOutline`}
                   >
                     About
                   </a>
@@ -97,7 +99,7 @@ function Navbar(props) {
                   <a
                     className={`${
                       navOpen ? "" : "navBtnMenuClosed"
-                    } navBtnMenuOpen textOutlineWhite`}
+                    } navBtnMenuOpen textOutline`}
                   >
                     Projects
                   </a>
@@ -109,7 +111,7 @@ function Navbar(props) {
                   <a
                     className={`${
                       navOpen ? "" : "navBtnMenuClosed"
-                    } navBtnMenuOpen textOutlineWhite`}
+                    } navBtnMenuOpen textOutline`}
                   >
                     Contact
                   </a>
@@ -180,4 +182,7 @@ function Navbar(props) {
     </nav>
   );
 }
+
+Navbar.propTypes = {};
+
 export default Navbar;
