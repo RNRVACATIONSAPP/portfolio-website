@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import "locomotive-scroll/dist/locomotive-scroll.css";
 export default function useLocoScroll(navOpen) {
   useEffect(() => {
     // if (typeof window === "undefined") {
