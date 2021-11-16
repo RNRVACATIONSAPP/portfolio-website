@@ -2,8 +2,9 @@ import PropTypes from "prop-types";
 import Navbar from "../components/Navbar";
 import ProjectItem from "../components/ProjectItem";
 import { useRef, useState, useEffect } from "react";
-import Image from 'next/image';
-
+import Image from "next/image";
+import axios from "axios";
+import Link from "next/link";
 const pageData = [
   {
     url: "/images/knstntin-coding.jpg",
@@ -37,9 +38,9 @@ const pageData = [
   },
 ];
 
-function projects(props) {
+function projects({ project }) {
   const menuItems = useRef(null);
-  const [renderItems, setRenderItems] = useState(pageData);
+  const [renderItems, setRenderItems] = useState(project);
 
   const cloneItems = () => {
     const itemHeight = menuItems.current.childNodes[0].offsetHeight;
@@ -91,7 +92,7 @@ function projects(props) {
 
   return (
     <section data-scroll-section className="bg-[#dad6cd]">
-    <div className="fixed prevminusIndex z-10 h-screen w-screen opacity-[20%] pointer-events-none">
+      <div className="fixed prevminusIndex z-10 h-screen w-screen opacity-[25%] pointer-events-none">
         <Image
           src="/images/grain-overlay.jpg"
           layout="fill"
@@ -104,7 +105,11 @@ function projects(props) {
         className="section py-0 pl-[10vw] h-screen w-screen box-border overflow-auto my-container  mx-auto"
       >
         {renderItems.map((project, index) => (
-          <ProjectItem key={index} project={project} projectIndex={index} />
+          <Link key={project.id} href={`/projects/${project.slug}`}>
+            <a>
+              <ProjectItem key={index} project={project} projectIndex={index} />
+            </a>
+          </Link>
         ))}
       </div>
     </section>
@@ -114,3 +119,15 @@ function projects(props) {
 projects.propTypes = {};
 
 export default projects;
+
+export async function getStaticProps(context) {
+  const project = await axios.get(
+    `${process.env.NEXT_PUBLIC_HOSTNAME}/projects/`
+  );
+
+  return {
+    props: {
+      project: project.data,
+    },
+  };
+}

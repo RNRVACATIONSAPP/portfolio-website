@@ -2,9 +2,9 @@ import { useEffect } from "react";
 
 export default function useLocoScroll(navOpen) {
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
+    // if (typeof window === "undefined") {
+    //   return;
+    // }
     let locoScroll = null;
 
     async function getLocomotive() {

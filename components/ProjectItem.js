@@ -61,7 +61,7 @@ function reducer(state, action) {
   }
 }
 
-function ProjectItem({ project, projectIndex }) {
+function ProjectItem({ project: { title, featureImage }, projectIndex }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const listItem = useRef(null);
   const easeMethod = "easeInOutCubic";
@@ -147,19 +147,19 @@ function ProjectItem({ project, projectIndex }) {
       className="project-item-container cursor-pointer leading-[1.25] py-[20px] list-none"
     >
       <Title
-        title={project.title}
+        title={title}
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
       />
       <ProjectImage
-        url={project.url}
+        url={`${featureImage.url}`}
         opacity={state.opacity}
         parallaxPos={state.parallaxPos}
         scale={state.scale}
         rotationPosition={state.rotationPosition}
       />
 
-      <div
+      {/* <div
         className={cn(
           "fixed top-1/2 left-[70vw] text-left text-[20px]  transform -translate-y-1/2 z-[1] info-block",
           { "as-active": state.active }
@@ -178,7 +178,7 @@ function ProjectItem({ project, projectIndex }) {
             </span>
           </p>
         ))}
-      </div>
+      </div> */}
     </li>
   );
 }
