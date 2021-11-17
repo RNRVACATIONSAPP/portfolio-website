@@ -13,5 +13,6 @@ module.exports = {
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
+    processCssUrls: false,
   },
 };
