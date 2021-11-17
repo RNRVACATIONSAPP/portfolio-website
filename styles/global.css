@@ -129,17 +129,13 @@
     transform: translate(0, 300px);
   }
 
-  .title-item {
-    .menu-title-clone {
-      clip-path: inset(0 100% 0 0);
-      transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-    }
+  .title-item .menu-title-clone {
+    clip-path: inset(0 100% 0 0);
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  }
 
-    &:hover {
-      .menu-title-clone {
-        clip-path: inset(0 0 0 0);
-      }
-    }
+  .title-item:hover .menu-title-clone {
+    clip-path: inset(0 0 0 0);
   }
 
   .marqueeText {
