@@ -2,9 +2,10 @@ import PropTypes from "prop-types";
 import Title from "./Title";
 import ProjectImage from "./ProjectImage";
 import { HashtagIcon } from "@heroicons/react/solid";
-import { useReducer, useRef } from "react";
+import { useEffect, useReducer, useRef } from "react";
 import animate from "./animate";
 import cn from "classnames";
+import { gsap } from "gsap";
 
 // REDUCER STATE
 const initialState = {
@@ -61,7 +62,7 @@ function reducer(state, action) {
   }
 }
 
-function ProjectItem({ project: { title, featureImage }, projectIndex }) {
+function ProjectItem({ project: { title, featureImage, tags }, projectIndex }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const listItem = useRef(null);
   const easeMethod = "easeInOutCubic";
@@ -141,10 +142,13 @@ function ProjectItem({ project: { title, featureImage }, projectIndex }) {
     listItem.current.removeEventListener("mousemove", parallax);
   };
 
+
+  const projectTags = tags.split(" ");
+
   return (
     <li
       ref={listItem}
-      className="project-item-container cursor-pointer leading-[1.25] py-[20px] list-none"
+      className="tag-container group project-item-container cursor-pointer leading-[1.25] py-[20px] list-none"
     >
       <Title
         title={title}
@@ -159,26 +163,27 @@ function ProjectItem({ project: { title, featureImage }, projectIndex }) {
         rotationPosition={state.rotationPosition}
       />
 
-      {/* <div
+      <div
         className={cn(
           "fixed top-1/2 left-[70vw] text-left text-[20px]  transform -translate-y-1/2 z-[1] info-block",
           { "as-active": state.active }
         )}
       >
-        <p className="mb-[10px] overflow-hidden font-medium text-[24px] info-block-header">
-          <span className="flex place-items-center">
-            # 0{projectIndex}
-          </span>
+        <p className="opacity-0 duration-300 group-hover:opacity-100 mb-[10px] overflow-hidden font-medium text-[24px] info-block-header">
+          <span className="flex place-items-center"># 0{projectIndex + 1}</span>
         </p>
 
-        {project.info.map((element) => (
-          <p key={element} className="flex mb-[10px] overflow-hidden ">
+        {projectTags.map((tag) => (
+          <p
+            key={tag}
+            className="tags duration-300 opacity-0 group-hover:opacity-100 flex mb-[10px] overflow-hidden "
+          >
             <span className="block transition-all duration-[.25s] ease-linear">
-              {element}
+              {tag}
             </span>
           </p>
         ))}
-      </div> */}
+      </div>
     </li>
   );
 }

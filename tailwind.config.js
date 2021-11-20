@@ -7,6 +7,8 @@ module.exports = {
       fontFamily: {
         Bulgari: ["Bulgari", "serif"],
         HelveticaNeue: ["Helvetica Neue", "sans-serif"],
+        SchnyderL: ["Schnyder L", "serif"],
+        GTWalsheim: ["GT Walsheim Pro", "sans-serif"],
       },
     },
     screens: {

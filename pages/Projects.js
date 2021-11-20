@@ -5,38 +5,6 @@ import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import axios from "axios";
 import Link from "next/link";
-const pageData = [
-  {
-    url: "/images/knstntin-coding.jpg",
-    title: "KVALITET I ALT",
-    info: ["Language Translations", "Building Consulting", ""],
-  },
-  {
-    url: "/images/KNSTNTIN.jpg",
-    title: "EVA EIK",
-    info: ["Spiritual Healer", "Songwriter Singer", "Life Coach"],
-  },
-  {
-    url: "/images/knstntin-outdoors.jpg",
-    title: "BORSCHT N TEARS",
-    info: ["Russian restaurant", "Authentic Cuisine", "Live Music"],
-  },
-  {
-    url: "/images/KNSTNTIN.jpg",
-    title: "AIR BNB CLONE",
-    info: ["Spiritual Healer", "Songwriter Singer", "Life Coach"],
-  },
-  {
-    url: "/images/knstntin-coding.jpg",
-    title: "INSTAGRAM CLONE",
-    info: ["Spiritual Healer", "Songwriter Singer", "Life Coach"],
-  },
-  {
-    url: "/images/knstntin-outdoors.jpg",
-    title: "NETFLIX CLONE",
-    info: ["Spiritual Healer", "Songwriter Singer", "Life Coach"],
-  },
-];
 
 function projects({ project }) {
   const menuItems = useRef(null);
@@ -90,8 +58,10 @@ function projects({ project }) {
     return () => ref.removeEventListener("scroll", scrollUpdate);
   }, [scrollUpdate]);
 
+ 
+
   return (
-    <section data-scroll-section className="bg-[#dad6cd]">
+    <section className="bg-[#dad6cd]">
       <div className="fixed prevminusIndex z-10 h-screen w-screen opacity-[25%] pointer-events-none">
         <Image
           src="/images/grain-overlay.jpg"

@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import Project from "./Project";
 
-
 function Projects(props) {
   return (
     <section data-scroll-section className="section  ">
@@ -55,4 +54,3 @@ function Projects(props) {
 Projects.propTypes = {};
 
 export default Projects;
-

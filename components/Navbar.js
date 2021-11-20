@@ -2,9 +2,8 @@ import PropTypes from "prop-types";
 import { MenuAlt3Icon, XIcon } from "@heroicons/react/solid";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import useLocoScroll from "../hooks/useLocoScroll";
 function Navbar(props) {
-  const [navOpen, setNavOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(true);
 
   // CHECK IF NAV IS OPEN
   const isMenuOpen = () => {
@@ -15,7 +14,7 @@ function Navbar(props) {
     }
   };
 
-  useLocoScroll(navOpen);
+
 
   // STOP SCROLL WHEN NAV IS OPEN
   useEffect(() => {
@@ -27,7 +26,6 @@ function Navbar(props) {
   }, [isMenuOpen]);
   return (
     <nav
-      data-scroll-section
       className="absolute w-screen px-[30px] z-[10] pt-[43px]"
     >
       <div className="relative">
