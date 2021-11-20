@@ -116,7 +116,7 @@ export default function ProjectDetails({
       <section data-scroll-section>
         <header className="relative section my-container h-screen w-screen flex flex-col">
           <h1 className="projectTitle pt-[22vh] font-SchnyderL font-semibold text-center tracking-[1.2rem] leading-[130px] text-[10vw] md:text-[8.8vw]">
-            {title} yello man
+            {title}
           </h1>
           <div className="details absolute bottom-[5vh] px-[6vw] right-0 left-0 flex  pt-[10vh] w-full justify-between ">
             <span
