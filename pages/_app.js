@@ -23,9 +23,7 @@ function MyApp({ Component, pageProps }) {
           smartphone: {
             smooth: true,
           },
-          tablet: {
-            smooth: true,
-          },
+         
         });
 
         // UPDATE SCROLLTRIGGER WHEN LOCOMOTIVE SCROLL SCROLLS
