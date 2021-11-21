@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
-import Project from "./Project";
+import ProjectItem from "./ProjectItem";
+import axios from "axios";
 
-function Projects(props) {
+function ProjectsSection({ project }) {
   return (
-    <section data-scroll-section className="section  ">
-      <hgroup className="flex space-x-10 marqueeEffect w-screen">
+    <section data-scroll-section className="section  w-screen h-screen">
+      <hgroup className="flex space-x-10 marqueeEffect ">
         <h2 className="marqueeText ">
           SELECTED{" "}
           <span className="textOutlineBlack text-transparent">PROJECTS</span>
@@ -42,15 +43,20 @@ function Projects(props) {
           <span className="textOutlineBlack text-transparent">PROJECTS</span>
         </h2>
       </hgroup>
-      <div className="flex flex-col space-y-3 py-8 max-w-xl sm:max-w-2xl lg:max-w-6xl mx-auto">
-        <Project title="EVA EIK" page="/" img="/images/KNSTNTIN.jpg" />
-        <Project title="KVALITET I ALT" page="/" img="/images/KNSTNTIN.jpg" />
-        <Project title="BORSCHT N TEARS" page="/" img="/images/KNSTNTIN.jpg" />
+      <div className="flex flex-col w-full h-full pb-20">
+        <div className="flex w-full h-full">
+          <div className="block h-full bg-black w-1/2"></div>
+          <div className="block h-full bg-blue-500 w-1/2"></div>
+        </div>
+        <div className="flex w-full h-full">
+          <div className="block h-full bg-blue-500 w-1/2"></div>
+          <div className="block h-full bg-black  w-1/2"></div>
+        </div>
       </div>
     </section>
   );
 }
 
-Projects.propTypes = {};
+ProjectsSection.propTypes = {};
 
-export default Projects;
+export default ProjectsSection;

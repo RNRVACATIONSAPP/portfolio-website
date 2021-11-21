@@ -3,10 +3,12 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 import Hero from "../components/Hero";
 import About from "../components/About";
-import Projects from "../components/Projects";
+import ProjectsSection from "../components/ProjectsSection";
 import { useState } from "react";
+import Contact from "../components/ContactSection";
+import axios from "axios";
 
-export default function Home() {
+export default function Home({project}) {
   const [preloader, setPreloader] = useState(true);
 
   return (
@@ -29,7 +31,20 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Projects />
+      <ProjectsSection project={project} />
+      <Contact />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const project = await axios.get(
+    `${process.env.NEXT_PUBLIC_HOSTNAME}/projects/`
+  );
+
+  return {
+    props: {
+      project: project.data,
+    },
+  };
 }

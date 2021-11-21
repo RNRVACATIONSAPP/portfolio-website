@@ -21,9 +21,13 @@ function MyApp({ Component, pageProps }) {
           getSpeed: true,
           getDirection: true,
           smartphone: {
-            smooth: true,
+            smooth: 0,
+            breakpoint: 500,
           },
-         
+          tablet: {
+            smooth: 1,
+
+          },
         });
 
         // UPDATE SCROLLTRIGGER WHEN LOCOMOTIVE SCROLL SCROLLS

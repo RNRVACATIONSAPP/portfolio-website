@@ -195,7 +195,7 @@ export default function ProjectDetails({
       </header>
       <section
         data-scroll-section
-        className="relative min-h-screen  flex flex-col z-50 w-full"
+        className="relative min-h-screen  flex flex-col z-30 w-full"
       >
         <div className="w-full flex justify-start items-start my-container pb-[6vw] ">
           <span className="w-1/2"></span>
@@ -227,7 +227,8 @@ export default function ProjectDetails({
         data-scroll-section
         className="relative section py-0 h-auto my-container"
       >
-        <div className="transform-container transform overflow-hidden place-items-center bg-black relative max-w-[900px] h-auto lg:mx-auto my-[5%] ">
+        <div className="relative transform-container transform overflow-hidden place-items-center bg-black max-w-[900px] h-auto lg:mx-auto my-[5%] ">
+          {/* <img className="absolute z-20 h-full w-full opacity-[0.02]" src="/images/grain-anim.gif" alt="" /> */}
           {projectAssets[1] ? (
             <video
               autoPlay
@@ -253,7 +254,7 @@ export default function ProjectDetails({
       </section>
       <section
         data-scroll-section
-        className="relative min-h-screen flex flex-col z-50 w-full"
+        className="relative min-h-screen flex flex-col z-30 w-full"
       >
         {featureImage && (
           <div className="w-full overflow-hidden with-parallax">

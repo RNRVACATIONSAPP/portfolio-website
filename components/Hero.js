@@ -68,7 +68,8 @@ function Hero(props) {
             <aside
               data-scroll
               data-scroll-speed="-1"
-              className="relative z-[1] -bottom-14 flex justify-between place-items-center text-[15px] uppercase  mt-[86px] font-bold tracking-[.100em]"
+              data-scroll-position="top"
+              className="relative z-[1]  flex justify-between place-items-center text-[15px] uppercase  mt-[86px] font-bold tracking-[.100em]"
             >
               <h3>SCROLL DOWN</h3>
               <a href="#about">

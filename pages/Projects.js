@@ -58,8 +58,6 @@ function projects({ project }) {
     return () => ref.removeEventListener("scroll", scrollUpdate);
   }, [scrollUpdate]);
 
- 
-
   return (
     <section className="bg-[#dad6cd]">
       <div className="fixed prevminusIndex z-10 h-screen w-screen opacity-[25%] pointer-events-none">
