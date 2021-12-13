@@ -24,7 +24,7 @@ export default function ProjectDetails({
   const projectTags = tags.split(" ");
   const splitTags = projectTags.join(" / ").toUpperCase();
 
-  console.log(project);
+
   useEffect(() => {
     setTimeout(() => {
       gsap.to(".dot", {

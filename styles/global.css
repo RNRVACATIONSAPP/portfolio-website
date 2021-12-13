@@ -34,7 +34,6 @@
     font-display: swap;
   }
 
-
   @font-face {
     font-family: "Helvetica Neue";
     src: url("/fonts/HelveticaNeue-Roman.woff2") format("woff2"),
@@ -46,36 +45,34 @@
   }
 
   @font-face {
-    font-family: 'GT Walsheim Pro';
-    src: url('/fonts/GTWalsheimPro-Regular.woff2') format('woff2'),
-        url('/fonts/GTWalsheimPro-Regular.woff') format('woff'),
-        url('/fonts/GTWalsheimPro-Regular.ttf') format('truetype');
+    font-family: "GT Walsheim Pro";
+    src: url("/fonts/GTWalsheimPro-Regular.woff2") format("woff2"),
+      url("/fonts/GTWalsheimPro-Regular.woff") format("woff"),
+      url("/fonts/GTWalsheimPro-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+  }
 
-@font-face {
-    font-family: 'GT Walsheim Pro';
-    src: url('/fonts/GTWalsheimPro-Light.woff2') format('woff2'),
-        url('/fonts/GTWalsheimPro-Light.woff') format('woff'),
-        url('/fonts/GTWalsheimPro-Light.ttf') format('truetype');
+  @font-face {
+    font-family: "GT Walsheim Pro";
+    src: url("/fonts/GTWalsheimPro-Light.woff2") format("woff2"),
+      url("/fonts/GTWalsheimPro-Light.woff") format("woff"),
+      url("/fonts/GTWalsheimPro-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
-}
+  }
 
-@font-face {
-    font-family: 'GT Walsheim Pro';
-    src: url('/fonts/GTWalsheimPro-Medium.woff2') format('woff2'),
-        url('/fonts/GTWalsheimPro-Medium.woff') format('woff'),
-        url('/fonts/GTWalsheimPro-Medium.ttf') format('truetype');
+  @font-face {
+    font-family: "GT Walsheim Pro";
+    src: url("/fonts/GTWalsheimPro-Medium.woff2") format("woff2"),
+      url("/fonts/GTWalsheimPro-Medium.woff") format("woff"),
+      url("/fonts/GTWalsheimPro-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
-}
-
-
+  }
 
   @font-face {
     font-family: "Bulgari";
@@ -122,7 +119,7 @@
   }
 
   * {
-    @apply box-border
+    @apply box-border;
   }
 
   body {
@@ -237,4 +234,7 @@
       transform: translate(-100vw, 0);
     }
   }
+
+  /* PROJECTS COMPONENT*/
+
 }
