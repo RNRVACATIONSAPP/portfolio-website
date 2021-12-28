@@ -70,10 +70,10 @@ function projects({ project }) {
       <Navbar />
       <div
         ref={menuItems}
-        className="section py-0 pl-[10vw] h-screen w-screen box-border overflow-auto my-container  mx-auto"
+        className="section py-0 pl-[10vw] h-screen w-screen box-border overflow-auto my-container mx-auto"
       >
         {renderItems.map((project, index) => (
-          <Link key={project.id} href={`/projects/${project.slug}`}>
+          <Link key={index} href={`/projects/${project.slug}`}>
             <a>
               <ProjectItem key={index} project={project} projectIndex={index} />
             </a>

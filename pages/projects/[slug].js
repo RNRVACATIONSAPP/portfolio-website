@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import Navbar from "../../components/Navbar";
 import Image from "next/image";
-
+import Link from "next/link";
 import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -23,7 +23,6 @@ export default function ProjectDetails({
 }) {
   const projectTags = tags.split(" ");
   const splitTags = projectTags.join(" / ").toUpperCase();
-
 
   useEffect(() => {
     setTimeout(() => {
@@ -292,6 +291,31 @@ export default function ProjectDetails({
           </div>
         </div>
         <div className="block h-full w-1/2"></div>
+      </section>
+      <section
+        data-scroll
+        data-scroll-section
+        className="section flex flex-col justify-center h-screen w-screen bg-[#dad6cd]"
+      >
+        <div className="text-[8vw] tracking-normal leading-[1.1] font-bold text-left font-SchnyderL  w-full h-full flex flex-col justify-center place-items-center ">
+          <Link href="/Projects">
+            <a className="flex flex-col justify-between w-screen text-center px-[6vw] py-[1vw]">
+              <span>Go back to all</span>
+              <i className="text-white">Projects?</i>
+            </a>
+          </Link>
+        </div>
+        <ul className="flex my-container space-x-32 font-SchnyderL text-lg">
+          <li>
+            <a target="_blank" href="https://www.linkedin.com/in/konstantintaylor/">Linked In</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/KONSTANTINDEV1">Github</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/iamtinotaylor/">Instagram</a>
+          </li>
+        </ul>
       </section>
     </>
   );

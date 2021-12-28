@@ -26,7 +26,6 @@ function MyApp({ Component, pageProps }) {
           },
           tablet: {
             smooth: 1,
-
           },
         });
 
@@ -84,7 +83,7 @@ function MyApp({ Component, pageProps }) {
   });
 
   return (
-    <main data-scroll-container className="scroll-container">
+    <main data-scroll-container className="scroll-container fixed w-screen">
       <Component {...pageProps} />
     </main>
   );

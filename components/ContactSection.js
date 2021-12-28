@@ -61,13 +61,22 @@ function ContactSection() {
       </div>
       <ul className="flex my-container space-x-32 font-SchnyderL text-lg">
         <li>
-          <a href="/">Linked In</a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/konstantintaylor/"
+          >
+            Linked In
+          </a>
         </li>
         <li>
-          <a href="/">Github</a>
+          <a target="_blank" href="https://github.com/KONSTANTINDEV1">
+            Github
+          </a>
         </li>
         <li>
-          <a href="/">Instagram</a>
+          <a target="_blank" href="https://www.instagram.com/iamtinotaylor/">
+            Instagram
+          </a>
         </li>
       </ul>
     </footer>

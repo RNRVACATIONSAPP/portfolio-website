@@ -93,23 +93,25 @@ function ProjectsSection({ project }) {
                       title === "Eva Eik"
                         ? ""
                         : "bg-[#f93700] sm:bg-[#dad6cd] text-white"
-                    } relative place-items-center with-parallax h-full w-full md:w-1/2 mx-auto `}
+                    }  place-items-center with-parallax h-full w-full md:w-1/2 mx-auto `}
                   >
-                    <div className="relative flex overflow-hidden justify-center w-full">
-                      <img
-                        className=" h-[70vh] xl:h-[80vh] w-[90%] xl:w-[50%] sm:w-[60%] transform scale-[1.3] -translate-y-3  object-cover"
-                        src={featureImage.url}
-                        alt=""
-                      />
-                    </div>
+                    <div className="relative flex justify-center w-full">
+                      <div className="overflow-hidden flex justify-center w-full">
+                        <img
+                          className=" h-[70vh] xl:h-[75vh] w-[90%] xl:w-[50%] sm:w-[60%] transform scale-[1.3] -translate-y-3  object-cover"
+                          src={featureImage.url}
+                          alt=""
+                        />
+                      </div>
                       <p
                         className={`absolute -bottom-4 ${
                           title === "Eva Eik" ? "" : "text-white"
-                        }  text-4xl sm:text-[3.1vw] font-SchnyderL font-medium uppercase`}
+                        }  text-[7vw] leading-10 sm:text-[3.1vw] font-SchnyderL font-medium uppercase`}
                       >
                         {title}
                       </p>
                       <p className="absolute -bottom-16">{splitTags}</p>
+                    </div>
                     <div className=" flex py-10 pt-20 sm:hidden flex-col justify-center place-items-center w-full sm:w-1/2">
                       <div className="flex justify-center place-items-center w-1/2">
                         <ul className=" font-GTWalsheim leading-[0.68] font-light block">
