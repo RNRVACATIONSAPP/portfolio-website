@@ -64,6 +64,7 @@ function projects({ project }) {
         <Image
           src="/images/grain-overlay.jpg"
           layout="fill"
+          priority
           objectFit="cover"
         />
       </div>

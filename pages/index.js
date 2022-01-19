@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import Image from "next/image";
+
 import Hero from "../components/Hero";
 import About from "../components/About";
 import ProjectsSection from "../components/ProjectsSection";
 import { useState } from "react";
-import Contact from "../components/ContactSection";
+
 import axios from "axios";
+import ContactSection from "../components/ContactSection";
 
 export default function Home({project}) {
   const [preloader, setPreloader] = useState(true);
@@ -21,18 +22,11 @@ export default function Home({project}) {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
         />
       </Head>
-      <div className="fixed prevminusIndex z-10 h-screen w-screen opacity-[10%] pointer-events-none">
-        <Image
-          src="/images/grain-overlay.jpg"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
       <Navbar />
       <Hero />
       <About />
       <ProjectsSection project={project} />
-      <Contact />
+      <ContactSection brownBg={true}/>
     </div>
   );
 }

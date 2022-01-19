@@ -131,19 +131,12 @@ export default function ProjectDetails({
   }, []);
 
   return (
-    <>
-      <div className="fixed z-[-1] h-screen w-screen opacity-[15%] pointer-events-none">
-        <Image
-          src="/images/grain-overlay.jpg"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+    <section className="bg-[#f2f2f2]">
       <Navbar />
 
       <header
         data-scroll-section
-        className="relative section my-container h-screen w-screen flex flex-col"
+        className="relative section my-container h-screen w-screen flex flex-col "
       >
         <h1 className="projectTitle pt-[22vh] font-SchnyderL font-semibold text-center tracking-[1.2rem] leading-[130px] text-[10vw] md:text-[8.8vw]">
           {title}
@@ -226,7 +219,7 @@ export default function ProjectDetails({
         data-scroll-section
         className="relative section py-0 h-auto my-container"
       >
-        <div className="relative transform-container transform overflow-hidden place-items-center bg-black max-w-[900px] h-auto lg:mx-auto my-[5%] ">
+        <div className="relative shadow-xl  transform-container transform overflow-hidden place-items-center bg-black max-w-[900px] h-auto lg:mx-auto my-[5%] ">
           {/* <img className="absolute z-20 h-full w-full opacity-[0.02]" src="/images/grain-anim.gif" alt="" /> */}
           {projectAssets[1] ? (
             <video
@@ -244,7 +237,7 @@ export default function ProjectDetails({
           )}
         </div>
         {description && <p>{description}</p>}
-        <div className="transform-container  transform overflow-hidden place-items-center bg-black relative max-w-[900px] h-auto lg:mx-auto my-[5%] ">
+        <div className="transform-container shadow-xl  transform overflow-hidden place-items-center bg-black relative max-w-[900px] h-auto lg:mx-auto my-[5%] ">
           <img
             className="transform-image  w-full h-full"
             src={`${projectAssets[0].url}`}
@@ -271,7 +264,7 @@ export default function ProjectDetails({
                 src="/images/shadow-kit.webp"
                 className=" top-0 w-full z-30 h-full opacity-20"
               />
-              <div className="transform-container mx-5 transform overflow-hidden place-items-center bg-black relative max-w-[900px] h-auto md:mx-auto my-[5%] ">
+              <div className="transform-container shadow-xl  mx-5 transform overflow-hidden place-items-center bg-black relative max-w-[900px] h-auto md:mx-auto my-[5%] ">
                 <img
                   className="transform-image w-full h-full"
                   src={`${projectAssets[0].url}`}
@@ -283,19 +276,29 @@ export default function ProjectDetails({
       </section>
       <section data-scroll-section className="h-screen flex">
         <div className="relative h-full w-1/2 bg-[#dbd5c9]">
-          <div className="transform-container mx-20 transform -translate-y-1/2 overflow-hidden place-items-center bg-black absolute top-[50%] max-w-[900px] h-auto my-[5%] ">
+          <div className="transform-container mx-20 shadow-xl transform -translate-y-1/2 overflow-hidden place-items-center bg-black absolute top-[50%] max-w-[900px] h-auto ">
             <img
               className="transform-image w-full h-full"
               src={`${projectAssets[0].url}`}
             />
           </div>
         </div>
-        <div className="block h-full w-1/2"></div>
+        <div className="flex flex-col justify-center place-items-center h-full w-1/2  ">
+          <h2 className="font-GTWalsheim w-1/2 pb-14 pr-20 text-lg  leading-tight tracking-normal font-medium">
+            The website is built using a unique stack of technologies to enable
+            custom animations and transitions between the pages.
+          </h2>
+          <p className="w-1/2 text-sm pr-10">
+            This project was both challenging and fun as we were aiming at
+            creating a unique digital experience that is also focused on
+            maximizing e-commerce efficiency and revenue.
+          </p>
+        </div>
       </section>
       <section
         data-scroll
         data-scroll-section
-        className="section flex flex-col justify-center h-screen w-screen bg-[#dad6cd]"
+        className="section flex flex-col justify-center h-screen w-screen bg-[#dbd5c9]"
       >
         <div className="text-[8vw] tracking-normal leading-[1.1] font-bold text-left font-SchnyderL  w-full h-full flex flex-col justify-center place-items-center ">
           <Link href="/Projects">
@@ -307,17 +310,26 @@ export default function ProjectDetails({
         </div>
         <ul className="flex my-container space-x-32 font-SchnyderL text-lg">
           <li>
-            <a target="_blank" href="https://www.linkedin.com/in/konstantintaylor/">Linked In</a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/konstantintaylor/"
+            >
+              Linked In
+            </a>
           </li>
           <li>
-            <a target="_blank" href="https://github.com/KONSTANTINDEV1">Github</a>
+            <a target="_blank" href="https://github.com/KONSTANTINDEV1">
+              Github
+            </a>
           </li>
           <li>
-            <a target="_blank" href="https://www.instagram.com/iamtinotaylor/">Instagram</a>
+            <a target="_blank" href="https://www.instagram.com/iamtinotaylor/">
+              Instagram
+            </a>
           </li>
         </ul>
       </section>
-    </>
+    </section>
   );
 }
 

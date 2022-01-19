@@ -30,7 +30,7 @@ function ProjectsSection({ project }) {
     }, 400);
   }, []);
   return (
-    <section data-scroll-section className="w-screen min-h-screen">
+    <section data-scroll-section className="w-screen min-h-screen bg-[#f2f2f2]">
       <hgroup className="flex py-20 pt-30 space-x-10 marqueeEffect">
         <h2 className="marqueeText ">
           SELECTED
@@ -115,16 +115,12 @@ function ProjectsSection({ project }) {
                     <div className=" flex py-10 pt-20 sm:hidden flex-col justify-center place-items-center w-full sm:w-1/2">
                       <div className="flex justify-center place-items-center w-1/2">
                         <ul className=" font-GTWalsheim leading-[0.68] font-light block">
-                          <li className="hidden sm:flex absolute  left-[46.5%] transform -translate-x-[46.5%]  text-[15vw] md:text-[10.5vw] w-[15vw] flex-shrink-0 ">
+                          <li className="hidden sm:flex absolute  left-[45.5%] transform -translate-x-[45.5%]  text-[15vw] md:text-[10.5vw] w-[15vw] flex-shrink-0 ">
                             {title[0]}
                             <span className="dot">.</span>
                           </li>
                         </ul>
                         <div className="text-center relative sm:absolute sm:left-1/2 transform sm:translate-x-1/2 flex flex-col justify-between">
-                          {/* <p className=" font-SchnyderL font-medium uppercase text-3xl">
-                            {title}
-                          </p> */}
-                          {/* <span className="text-xs pb-11">{splitTags}</span> */}
                           <p className="text-sm leading-[1.6] sm:w-[40%]">
                             {shortDescription}
                           </p>
@@ -148,7 +144,7 @@ function ProjectsSection({ project }) {
                   >
                     <div className="flex justify-center place-items-center w-1/2 ">
                       <ul className="font-GTWalsheim leading-[0.68] font-light block">
-                        <li className="hidden sm:flex text-black absolute left-[46.5%] transform -translate-x-[46.5%]  text-[15vw] md:text-[10.5vw] w-[15vw] flex-shrink-0 ">
+                        <li className="hidden sm:flex text-black absolute left-[55%] transform -translate-x-[55%]  text-[15vw] md:text-[10.5vw] w-[15vw] flex-shrink-0 ">
                           {title[0]}
                           <span className="dot">.</span>
                         </li>
@@ -161,7 +157,7 @@ function ProjectsSection({ project }) {
                         <p className="text-sm leading-[1.6] sm:w-[40%]">
                           {shortDescription}
                         </p>
-                        <span className="text-xs pb-11">{splitTags}</span>
+                        <span className="text-xs pb-11"></span>
                         <a
                           href={siteUrl}
                           target="_blank"

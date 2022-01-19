@@ -40,7 +40,7 @@ function Navbar(props) {
           {/* Desktop Nav Links */}
           <ul className="hidden sm:flex justify-between space-x-4 z-[3]">
             <li className="flex flex-col group relative pointer-events-auto">
-              <Link href="#about">
+              <Link href="/About">
                 <a className="navBtn">About</a>
               </Link>
               <p className="navBtnUnderlineDesktop"></p>
