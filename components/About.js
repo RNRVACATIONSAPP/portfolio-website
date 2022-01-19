@@ -23,7 +23,7 @@ function About(props) {
               name="button"
               className="relative uppercase mt-[40px] lg:mt-[70px] group"
             >
-              <Link href="/">
+              <Link href="/About">
                 <a>LEARN MORE</a>
               </Link>
               <p className="navBtnUnderlineDesktop"></p>

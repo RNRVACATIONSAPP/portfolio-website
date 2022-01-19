@@ -3,7 +3,7 @@ import { MenuAlt3Icon, XIcon } from "@heroicons/react/solid";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 function Navbar(props) {
-  const [navOpen, setNavOpen] = useState(true);
+  const [navOpen, setNavOpen] = useState(false);
 
   // CHECK IF NAV IS OPEN
   const isMenuOpen = () => {
@@ -26,7 +26,7 @@ function Navbar(props) {
   }, [isMenuOpen]);
   return (
     <nav
-      className="absolute w-screen px-[30px] z-[10] pt-[43px]"
+      className="fixed w-screen px-[30px] z-[40] pt-[43px]"
     >
       <div className="relative">
         <ul className="flex justify-between my-container mx-auto place-items-center">
@@ -40,7 +40,7 @@ function Navbar(props) {
           {/* Desktop Nav Links */}
           <ul className="hidden sm:flex justify-between space-x-4 z-[3]">
             <li className="flex flex-col group relative pointer-events-auto">
-              <Link href="#about">
+              <Link href="/About">
                 <a className="navBtn">About</a>
               </Link>
               <p className="navBtnUnderlineDesktop"></p>

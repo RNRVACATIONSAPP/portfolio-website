@@ -3,6 +3,7 @@ import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,10 +22,11 @@ function MyApp({ Component, pageProps }) {
           getSpeed: true,
           getDirection: true,
           smartphone: {
-            smooth: true,
+            smooth: 0,
+            breakpoint: 500,
           },
           tablet: {
-            smooth: true,
+            smooth: 1,
           },
         });
 
@@ -72,17 +74,24 @@ function MyApp({ Component, pageProps }) {
 
       locoScroll.destroy();
 
-      setTimeout(() => {
-        locoScroll.init();
-        ScrollTrigger.refresh();
-      }, 300);
+      // setTimeout(() => {
+      //   locoScroll.init();
+      //   ScrollTrigger.refresh();
+      // }, 300);
 
       ScrollTrigger.removeEventListener("refresh", lsUpdate);
     };
   });
 
   return (
-    <main data-scroll-container className="scroll-container">
+    <main data-scroll-container className="scroll-container fixed w-screen">
+       <div className="fixed prevminusIndex z-50 h-screen w-screen opacity-[80%] mix-blend-soft-light pointer-events-none">
+        <Image
+          src="/images/Film-Grain.png"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
       <Component {...pageProps} />
     </main>
   );

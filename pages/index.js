@@ -1,12 +1,15 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import Image from "next/image";
+
 import Hero from "../components/Hero";
 import About from "../components/About";
-import Projects from "../components/Projects";
+import ProjectsSection from "../components/ProjectsSection";
 import { useState } from "react";
 
-export default function Home() {
+import axios from "axios";
+import ContactSection from "../components/ContactSection";
+
+export default function Home({project}) {
   const [preloader, setPreloader] = useState(true);
 
   return (
@@ -19,17 +22,23 @@ export default function Home() {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
         />
       </Head>
-      <div className="fixed prevminusIndex z-10 h-screen w-screen opacity-[10%] pointer-events-none">
-        <Image
-          src="/images/grain-overlay.jpg"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
       <Navbar />
       <Hero />
       <About />
-      <Projects />
+      <ProjectsSection project={project} />
+      <ContactSection brownBg={true}/>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const project = await axios.get(
+    `${process.env.NEXT_PUBLIC_HOSTNAME}/projects/`
+  );
+
+  return {
+    props: {
+      project: project.data,
+    },
+  };
 }
