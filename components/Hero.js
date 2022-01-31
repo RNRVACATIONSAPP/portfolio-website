@@ -5,12 +5,12 @@ import { useEffect } from "react";
 
 function Hero(props) {
   useEffect(() => {
-    const split = new SplitText("#header-text", {
+    const split = new SplitText("#split-text", {
       type: "lines",
       linesClass: "lineChildren",
     });
 
-    const splitParent = new SplitText("#header-text", {
+    const splitParent = new SplitText("#split-text", {
       type: "lines",
       linesClass: "lineParent",
     });
@@ -50,7 +50,7 @@ function Hero(props) {
                 alt="Hero image"
               />
               <h1
-                id="header-text"
+                id="split-text"
                 className="flex flex-col absolute ml-3 font-Bulgari text-center tracking-[.110em] leading-[130px] max-w-[790px] text-white mix-blend-difference text-[15vw]  md:text-[120px] lg:text-[140px] xl:text-[150px] pointer-events-none"
               >
                 CREATIVE DEVELOPER

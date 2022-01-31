@@ -1,34 +1,15 @@
 import PropTypes from "prop-types";
-import ProjectItem from "./ProjectItem";
 import Link from "next/link";
-import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import useParallax from "../hooks/useParallax";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectsSection({ project }) {
-  useEffect(() => {
-    setTimeout(() => {
-      gsap.utils.toArray(".with-parallax").forEach((section) => {
-        const image = section.querySelector("img");
+  // ADD PARALLAX TO IMAGES
+  useParallax();
 
-        gsap.to(image, {
-          yPercent: 30,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top bottom",
-            scrub: true,
-            // markers: true,
-            scroller: ".scroll-container",
-          },
-        });
-      });
-
-      ScrollTrigger.refresh();
-    }, 400);
-  }, []);
   return (
     <section data-scroll-section className="w-screen min-h-screen bg-[#f2f2f2]">
       <hgroup className="flex py-20 pt-30 space-x-10 marqueeEffect">
@@ -69,7 +50,7 @@ function ProjectsSection({ project }) {
           <span className="textOutlineBlack text-transparent">PROJECTS</span>
         </h2>
       </hgroup>
-      <div data-scroll className="flex flex-col w-full h-full  ">
+      <div data-scroll className="flex flex-col w-full h-full ">
         {project &&
           project
             .filter((item) => [1, 6].includes(item.id))
@@ -86,14 +67,14 @@ function ProjectsSection({ project }) {
               return (
                 <div
                   key={id}
-                  className=" relative flex  last:text-white sm:last:text-black sm:last:bg-[#dad6cd] flex-col sm:flex-row justify-center first:bg-white place-items-center w-full h-full"
+                  className="relative flex last:text-white sm:last:text-black sm:last:bg-[#dad6cd] flex-col sm:flex-row justify-center first:bg-white place-items-center w-full h-full"
                 >
                   <div
                     className={`flex flex-col justify-center ${
                       title === "Eva Eik"
-                        ? ""
+                        ? "pt-[10vw]"
                         : "bg-[#f93700] sm:bg-[#dad6cd] text-white"
-                    }  place-items-center with-parallax h-full w-full md:w-1/2 mx-auto `}
+                    }  place-items-center with-parallax h-full w-full md:w-1/2 mx-auto  p-[5vw] sm:p-0 `}
                   >
                     <div className="relative flex justify-center w-full">
                       <div className="overflow-hidden flex justify-center w-full">
@@ -121,7 +102,7 @@ function ProjectsSection({ project }) {
                           </li>
                         </ul>
                         <div className="text-center relative sm:absolute sm:left-1/2 transform sm:translate-x-1/2 flex flex-col justify-between">
-                          <p className="text-sm leading-[1.6] sm:w-[40%]">
+                          <p className="text-sm leading-[1.6] py-[30px] sm:p-0 sm:w-[40%]">
                             {shortDescription}
                           </p>
                           <a

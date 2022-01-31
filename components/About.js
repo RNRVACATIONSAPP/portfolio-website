@@ -12,12 +12,12 @@ function About(props) {
           <div className="flex-1 w-full mb-[30px] lg:mb-0 lg:max-w-[40%]">
             <h2 className="uppercase">THE ABILITY TO CREATE</h2>
             <p className="pt-10">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-              atque repellat amet nostrum magni aspernatur. Numquam nesciunt
-              deleniti dignissimos perferendis facilis doloremque nulla.
-              Doloribus, reiciendis asperiores? Iste labore doloremque
-              voluptatem? Magnam magni, reiciendis quas error dolores nisi nemo
-              deleniti.
+              Being creative is something that I have always loved doing. Whether
+              that be musically or visually, the goal is the same for me. To
+              create a piece of art that captures a new world and draws others
+              in to explore. Since beginning my journey as a Front End Developer
+              two years ago, I have been eager to transform peoples concepts and stories
+              into aesthetically pleasing journeys on the web.
             </p>
             <button
               name="button"

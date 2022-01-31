@@ -17,12 +17,12 @@ function MyApp({ Component, pageProps }) {
         locoScroll = new LocomotiveScroll({
           el: scrollContainer, //DEFINE THE SCROLL CONTAINER
           smooth: true,
-          multiplier: 0.8, //CHANGE THE SPEED OF THE USERS SCROLL
+          multiplier: 1, //CHANGE THE SPEED OF THE USERS SCROLL
           lerp: 0.06,
           getSpeed: true,
           getDirection: true,
           smartphone: {
-            smooth: 0,
+            smooth: 1,
             breakpoint: 500,
           },
           tablet: {
@@ -85,11 +85,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <main data-scroll-container className="scroll-container fixed w-screen">
-       <div className="fixed prevminusIndex z-50 h-screen w-screen opacity-[80%] mix-blend-soft-light pointer-events-none">
+      <div className="fixed prevminusIndex z-50 h-screen w-screen opacity-[80%] mix-blend-soft-light pointer-events-none">
         <Image
           src="/images/Film-Grain.png"
           layout="fill"
           objectFit="cover"
+          priority={true}
         />
       </div>
       <Component {...pageProps} />

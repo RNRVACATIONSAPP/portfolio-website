@@ -1,45 +1,28 @@
 import Image from "next/image";
-import { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import ProjectsSection from "../components/ProjectsSection";
-import ContactSection from "../components/ContactSection";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import AboutContact from "../components/AboutContact";
+import useParallax from "../hooks/useParallax";
 
 function About() {
-  useEffect(() => {
-    setTimeout(() => {
-      gsap.utils.toArray(".with-parallax").forEach((section) => {
-        const image = section.querySelector("img");
+  // ADD PARALLAX TO IMAGES
+  useParallax();
 
-        gsap.to(image, {
-          yPercent: 30,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top bottom",
-            scrub: true,
-            // markers: true,
-            scroller: ".scroll-container",
-          },
-        });
-      });
-
-      ScrollTrigger.refresh();
-    }, 400);
-  }, []);
   return (
     <>
       <Navbar />
       <section
         data-scroll
         data-scroll-section
-        className="py-[200px] .with-parallax bg-[#dad6cd]"
+        className=" py-[100px] sm:pt-[200px] .with-parallax bg-[#dad6cd]"
       >
-        <article className="flex flex-col xs:flex-row">
-          <div className="overflow-hidden w-full sm:w-[45%] ">
+        <article
+          className=" flex flex-col sm:flex-row"
+        >
+          <div
+            data-scroll
+            data-scroll-speed="-2"
+            className="overflow-hidden pr-[8vw] sm:pr-0 w-full sm:w-[45%] "
+          >
             <div className="relative transform ">
               <Image
                 data-scroll
@@ -52,48 +35,102 @@ function About() {
               />
             </div>
           </div>
-          <aside className="flex w-[45%] -mt-5 pt-0 px-[4vw] section">
+          <aside className="flex w-full sm:w-[45%] -mt-5 pt-0 sm:px-[4vw] section">
             <ul
               data-scroll
-              data-scroll-speed="4"
-              data-scroll-position="top"
-              className="font-SchnyderL font-semibold  block"
+              className="font-SchnyderL font-semibold  block relative"
             >
-              <li className="relative font-GTWalsheim font-normal flex text-[15vw] flex-shrink-0 ">
-                T
-                <span data-scroll data-scroll-position="top" className="dot">
-                  .
-                </span>
-              </li>
-              <h2 className=" mb-12 text-[4.4vw] tracking-normal font-normal">
-                a bit about myself
-              </h2>
-              <h2 className="font-GTWalsheim font-light tracking-normal  text-[2vw]">
+              <aside className="inline-flex sm:flex-col">
+                <li className="relative font-GTWalsheim font-normal flex text-[10rem]  sm:text-[15vw] flex-shrink-0 ">
+                  T
+                  <span data-scroll data-scroll-position="top" className="dot">
+                    .
+                  </span>
+                </li>
+                <h2 className="inline-block mb-12 text-left text-4xl ml-auto mt-auto w-[45%] sm:w-full  sm:mt-0 sm:text-[4.4vw] tracking-normal font-normal">
+                  a bit about myself
+                </h2>
+              </aside>
+
+              <h2 className="font-GTWalsheim font-light tracking-normal text-2xl  sm:text-[2vw]">
                 Just about
               </h2>
-              <p className="mb-12 font-GTWalsheim font-normal  text-xs">
-                WHAT I DO
-              </p>
-              <p className="mb-28 font-GTWalsheim font-normal text-left block text-sm w-[150px]">
+              <p className=" font-GTWalsheim font-normal  text-xs">WHAT I DO</p>
+              <p className="pt-[4vw] font-GTWalsheim leading-6 font-normal text-left block text-sm w-[150px]">
                 My experience, awards collaborations, and own vibes, <br /> for
                 sure!
               </p>
-              <h2 className="font-GTWalsheim font-light tracking-normal  text-[2vw]">
+              <h2 className="font-GTWalsheim font-light tracking-normal mt-[4vw] text-[22px]  sm:text-[2vw]">
                 So,
               </h2>
               <p className="font-GTWalsheim">
-                So, I’m Zhenya — Art Director with an architectural background.
-                I love everything that has to do with product & visual design,
-                mobile & web projects as well as branding, typography, and
-                animations. With my solid industry experience, I know how to
-                help clients solve real business cases and grow their businesses
-                by using design thinking.
+                I’m Konstantin, also known as Tino — Front End Developer with a
+                creative background. I love everything that has to do with
+                visual design for both mobile & web projects as well as,
+                typography, and animations. With my solid industry experience, I
+                know how to help clients solve real business cases and grow
+                their businesses by using design thinking.
               </p>
+              <h2 className="pt-[8vw] pb-[14vw] sm:py-[4vw] text-[35px] lg:text-[4vw] tracking-normal font-normal">
+                Technologies that I use
+              </h2>
+              <hgroup className="flex flex-col space-y-5">
+                <h2 className="font-GTWalsheim font-light tracking-normal text-[4.1vw] sm:text-[3vw] lg:text-[2vw]">
+                  Next Js
+                </h2>
+                <h2 className="font-GTWalsheim font-light tracking-normal text-[4.1vw] sm:text-[3vw] lg:text-[2vw]">
+                  Firebase V9
+                </h2>
+                <h2 className="font-GTWalsheim font-light tracking-normal text-[4.1vw] sm:text-[3vw] lg:text-[2vw]">
+                  Tailwind CSS
+                </h2>
+                <h2 className="font-GTWalsheim font-light tracking-normal text-[4.1vw] sm:text-[3vw] lg:text-[2vw]">
+                  Stripe Checkout
+                </h2>
+                <h2 className="font-GTWalsheim font-light tracking-normal text-[4.1vw] sm:text-[3vw] lg:text-[2vw]">
+                  Headless CMS
+                </h2>
+                <h2 className="font-GTWalsheim font-light tracking-normal text-[4.1vw] sm:text-[3vw] lg:text-[2vw]">
+                  Redux
+                </h2>
+              </hgroup>
+              <div className="mt-20 space-y-32 flex flex-col">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 132 89"
+                  className=" max-w-[7vw] rotate-90 "
+                >
+                  <path
+                    data-v-184d2f2e=""
+                    d="M85.085 84.167c15.984-15.935 27.434-27.033 34.34-33.285l2.572-2.329-3.465.036c-24.534.252-64.046.254-118.532.006v-5.576c54.509.194 94.026.192 118.556-.005l3.065-.024-2.133-2.208c-6.944-7.184-18.435-18.779-34.477-34.788L89.303 0 132 45.775 89.237 89l-4.152-4.833z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 132 89"
+                  className=" max-w-[7vw] rotate-90 "
+                >
+                  <path
+                    data-v-184d2f2e=""
+                    d="M85.085 84.167c15.984-15.935 27.434-27.033 34.34-33.285l2.572-2.329-3.465.036c-24.534.252-64.046.254-118.532.006v-5.576c54.509.194 94.026.192 118.556-.005l3.065-.024-2.133-2.208c-6.944-7.184-18.435-18.779-34.477-34.788L89.303 0 132 45.775 89.237 89l-4.152-4.833z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 132 89"
+                  className=" max-w-[7vw] rotate-90 "
+                >
+                  <path
+                    data-v-184d2f2e=""
+                    d="M85.085 84.167c15.984-15.935 27.434-27.033 34.34-33.285l2.572-2.329-3.465.036c-24.534.252-64.046.254-118.532.006v-5.576c54.509.194 94.026.192 118.556-.005l3.065-.024-2.133-2.208c-6.944-7.184-18.435-18.779-34.477-34.788L89.303 0 132 45.775 89.237 89l-4.152-4.833z"
+                  />
+                </svg>
+              </div>
             </ul>
           </aside>
         </article>
       </section>
-      <ContactSection brownBg={true} />
+      <AboutContact />
     </>
   );
 }
