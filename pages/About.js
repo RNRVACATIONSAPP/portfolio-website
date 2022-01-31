@@ -15,18 +15,12 @@ function About() {
         data-scroll-section
         className=" py-[100px] sm:pt-[200px] .with-parallax bg-[#dad6cd]"
       >
-        <article
-          className=" flex flex-col sm:flex-row"
-        >
-          <div
-            data-scroll
-            data-scroll-speed="-2"
-            className="overflow-hidden pr-[8vw] sm:pr-0 w-full sm:w-[45%] "
-          >
+        <article className=" flex flex-col sm:flex-row">
+          <div className="overflow-hidden pr-[8vw] sm:pr-0 w-full sm:w-[45%] ">
             <div className="relative transform ">
-              <img
+              <Image
                 data-scroll
-                data-scroll-speed="-2"
+                data-scroll-speed="-4"
                 src="/images/knstntin-outdoors.jpg"
                 priority={true}
                 width="801"
