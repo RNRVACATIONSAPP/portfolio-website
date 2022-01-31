@@ -24,7 +24,7 @@ function About() {
             className="overflow-hidden pr-[8vw] sm:pr-0 w-full sm:w-[45%] "
           >
             <div className="relative transform ">
-              <Image
+              <img
                 data-scroll
                 data-scroll-speed="-2"
                 src="/images/knstntin-outdoors.jpg"
