@@ -77,9 +77,9 @@ function ProjectsSection({ project }) {
                     }  place-items-center with-parallax h-full w-full md:w-1/2 mx-auto  p-[5vw] sm:p-0 `}
                   >
                     <div className="relative flex justify-center w-full">
-                      <div className="overflow-hidden flex justify-center w-full">
+                      <div className="relative h-[70vh] xl:h-[75vh] w-[90%] xl:w-[65%] sm:w-[70%] overflow-hidden flex justify-center ">
                         <img
-                          className=" h-[70vh] xl:h-[75vh] w-[90%] xl:w-[50%] sm:w-[60%] transform scale-[1.3] -translate-y-3  object-cover"
+                          className="absolute h-full w-full  transform scale-[1.3] -translate-y-3  object-cover"
                           src={featureImage.url}
                           alt=""
                         />
