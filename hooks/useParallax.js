@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function useParallax() {
+
   useEffect(() => {
     setTimeout(() => {
       gsap.utils.toArray(".with-parallax").forEach((section) => {
