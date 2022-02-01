@@ -8,13 +8,10 @@ import { useState } from "react";
 
 import axios from "axios";
 import ContactSection from "../components/ContactSection";
-import useParallax from "../hooks/useParallax";
 
 export default function Home({project}) {
   const [preloader, setPreloader] = useState(true);
-  // ADD PARALLAX TO IMAGES
-  useParallax();
-
+  
 
   return (
     <div className="h-full">
