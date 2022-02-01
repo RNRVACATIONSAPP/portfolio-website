@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import Link from "next/link";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+const { gsap } = require("gsap/dist/gsap");
+const { ScrollTrigger } = require("gsap/dist/ScrollTrigger");
+
 import useParallax from "../hooks/useParallax";
 import Image from "next/image";
 

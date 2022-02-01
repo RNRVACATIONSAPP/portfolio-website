@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+const { gsap } = require("gsap/dist/gsap");
+const { ScrollTrigger } = require("gsap/dist/ScrollTrigger");
 
 gsap.registerPlugin(ScrollTrigger);
 
 function useParallax() {
-
+  console.log("ScrollTrigger", ScrollTrigger);
   useEffect(() => {
     setTimeout(() => {
       gsap.utils.toArray(".with-parallax").forEach((section) => {
