@@ -4,32 +4,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useParallax from "../hooks/useParallax";
 import Image from "next/image";
-import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectsSection({ project }) {
-  useEffect(() => {
-    setTimeout(() => {
-      gsap.utils.toArray(".with-parallax").forEach((section) => {
-        const image = section.querySelector("img");
-
-        gsap.to(image, {
-          yPercent: 30,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top bottom",
-            scrub: true,
-            // markers: true,
-            scroller: ".scroll-container",
-          },
-        });
-      });
-
-      ScrollTrigger.refresh();
-    }, 400);
-  }, []);
+  // ADD PARALLAX TO IMAGES
+  useParallax();
 
   return (
     <section data-scroll-section className="w-screen min-h-screen bg-[#f2f2f2]">
@@ -71,7 +51,7 @@ function ProjectsSection({ project }) {
           <span className="textOutlineBlack text-transparent">PROJECTS</span>
         </h2>
       </hgroup>
-      <div data-scroll className="flex flex-col w-full h-full ">
+      <div data-scroll className="flex flex-col with-parallax w-full h-full ">
         {project &&
           project
             .filter((item) => [1, 6].includes(item.id))
@@ -97,7 +77,7 @@ function ProjectsSection({ project }) {
                         : "bg-[#f93700] sm:bg-[#dad6cd] text-white"
                     }  place-items-center  h-full w-full md:w-1/2 mx-auto  p-[5vw] sm:p-0 `}
                   >
-                    <div className="relative with-parallax flex justify-center w-full">
+                    <div className="relative  flex justify-center w-full">
                       <div className="relative h-[70vh] xl:h-[75vh] w-[90%] xl:w-[65%] sm:w-[70%] overflow-hidden flex justify-center ">
                         <Image
                           className="transform scale-[1.3] -translate-y-3"
