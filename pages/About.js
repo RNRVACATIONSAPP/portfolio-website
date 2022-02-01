@@ -17,7 +17,7 @@ function About() {
       >
         <article className=" flex flex-col sm:flex-row">
           <div className="overflow-hidden pr-[8vw] sm:pr-0 w-full sm:w-[45%] ">
-            <div className="relative transform ">
+            <div className="relative transform">
               <Image
                 data-scroll
                 data-scroll-speed="-4"

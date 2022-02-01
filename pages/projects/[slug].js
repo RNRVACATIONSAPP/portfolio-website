@@ -21,9 +21,11 @@ export default function ProjectDetails({
     projectAssets,
   },
 }) {
+  // CONVERT TAGS TO ARRAY AND JOIN BY FORWARD SLASH
   const projectTags = tags.split(" ");
   const splitTags = projectTags.join(" / ").toUpperCase();
 
+  // GSAP ANIMATIONS
   useEffect(() => {
     setTimeout(() => {
       gsap.to(".dot", {
@@ -203,7 +205,7 @@ export default function ProjectDetails({
                 objectFit="cover"
                 priority
                 className="transform scale-[1.3]  -translate-y-7 w-full h-full"
-                src={`${featureImage.url}`}
+                src={featureImage.url}
                 alt=""
               />
               <Image
@@ -227,12 +229,12 @@ export default function ProjectDetails({
               muted
               loop
               className="transform-image  w-full h-full"
-              src={`${projectAssets[1].url}`}
+              src={projectAssets[1].url}
             />
           ) : (
             <img
               className="transform-image  w-full h-full"
-              src={`${projectAssets[0].url}`}
+              src={projectAssets[0].url}
             />
           )}
         </div>
@@ -240,7 +242,7 @@ export default function ProjectDetails({
         <div className="transform-container shadow-xl  transform overflow-hidden place-items-center bg-black relative max-w-[900px] h-auto lg:mx-auto my-[5%] ">
           <img
             className="transform-image  w-full h-full"
-            src={`${projectAssets[0].url}`}
+            src={projectAssets[0].url}
           />
         </div>
       </section>
@@ -256,7 +258,7 @@ export default function ProjectDetails({
                 objectFit="cover"
                 priority
                 className="transform scale-[1.3]  -translate-y-7 w-full h-full"
-                src={`${featureImage.url}`}
+                src={featureImage.url}
                 alt=""
               />
               <Image
@@ -267,7 +269,7 @@ export default function ProjectDetails({
               <div className="transform-container shadow-xl  mx-5 transform overflow-hidden place-items-center bg-black relative max-w-[900px] h-auto md:mx-auto my-[5%] ">
                 <img
                   className="transform-image w-full h-full"
-                  src={`${projectAssets[0].url}`}
+                  src={projectAssets[0].url}
                 />
               </div>
             </div>
@@ -279,7 +281,7 @@ export default function ProjectDetails({
           <div className="transform-container mx-20 shadow-xl transform -translate-y-1/2 overflow-hidden place-items-center bg-black absolute top-[50%] max-w-[900px] h-auto ">
             <img
               className="transform-image w-full h-full"
-              src={`${projectAssets[0].url}`}
+              src={projectAssets[0].url}
             />
           </div>
         </div>

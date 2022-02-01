@@ -2,11 +2,15 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
+import useParallax from "../hooks/useParallax";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectsSection({ project }) {
+  // ADD PARALLAX TO IMAGES
+  useParallax();
+
   return (
     <section data-scroll-section className="w-screen min-h-screen bg-[#f2f2f2]">
       <hgroup className="flex py-20 pt-30 space-x-10 marqueeEffect">
@@ -75,8 +79,10 @@ function ProjectsSection({ project }) {
                   >
                     <div className="relative flex justify-center w-full">
                       <div className="relative h-[70vh] xl:h-[75vh] w-[90%] xl:w-[65%] sm:w-[70%] overflow-hidden flex justify-center ">
-                        <img
-                          className="absolute h-full w-full  transform scale-[1.3] -translate-y-3  object-cover"
+                        <Image
+                          className="h-full w-full transform scale-[1.3] -translate-y-3"
+                          layout="fill"
+                          objectFit="cover"
                           src={featureImage.url}
                           alt=""
                         />
