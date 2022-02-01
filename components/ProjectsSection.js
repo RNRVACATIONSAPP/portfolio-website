@@ -4,12 +4,32 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useParallax from "../hooks/useParallax";
 import Image from "next/image";
+import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectsSection({ project }) {
-  // ADD PARALLAX TO IMAGES
-  useParallax();
+  useEffect(() => {
+    setTimeout(() => {
+      gsap.utils.toArray(".with-parallax").forEach((section) => {
+        const image = section.querySelector("img");
+
+        gsap.to(image, {
+          yPercent: 30,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            scrub: true,
+            // markers: true,
+            scroller: ".scroll-container",
+          },
+        });
+      });
+
+      ScrollTrigger.refresh();
+    }, 400);
+  }, []);
 
   return (
     <section data-scroll-section className="w-screen min-h-screen bg-[#f2f2f2]">
@@ -77,7 +97,7 @@ function ProjectsSection({ project }) {
                         : "bg-[#f93700] sm:bg-[#dad6cd] text-white"
                     }  place-items-center  h-full w-full md:w-1/2 mx-auto  p-[5vw] sm:p-0 `}
                   >
-                    <div className="relative .with-parallax flex justify-center w-full">
+                    <div className="relative with-parallax flex justify-center w-full">
                       <div className="relative h-[70vh] xl:h-[75vh] w-[90%] xl:w-[65%] sm:w-[70%] overflow-hidden flex justify-center ">
                         <Image
                           className="transform scale-[1.3] -translate-y-3"

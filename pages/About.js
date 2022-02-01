@@ -13,7 +13,7 @@ function About() {
       <section
         data-scroll
         data-scroll-section
-        className=" py-[100px] sm:pt-[200px] .with-parallax bg-[#dad6cd]"
+        className=" py-[100px] sm:pt-[200px] with-parallax bg-[#dad6cd]"
       >
         <article className=" flex flex-col sm:flex-row">
           <div className="overflow-hidden pr-[8vw] sm:pr-0 w-full sm:w-[45%] ">
