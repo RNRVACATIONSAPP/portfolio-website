@@ -51,7 +51,7 @@ function ProjectsSection({ project }) {
           <span className="textOutlineBlack text-transparent">PROJECTS</span>
         </h2>
       </hgroup>
-      <div data-scroll className="flex flex-col with-parallax w-full h-full ">
+      <div data-scroll className="flex flex-col w-full h-full ">
         {project &&
           project
             .filter((item) => [1, 6].includes(item.id))
