@@ -75,17 +75,25 @@ function ProjectsSection({ project }) {
                       title === "Eva Eik"
                         ? "pt-[10vw]"
                         : "bg-[#f93700] sm:bg-[#dad6cd] text-white"
-                    }  place-items-center  h-full w-full md:w-1/2 mx-auto  p-[5vw] sm:p-0 `}
+                    }  place-items-center with-parallax h-full w-full md:w-1/2 mx-auto  p-[5vw] sm:p-0 `}
                   >
-                    <div className="relative  flex justify-center w-full">
-                      <div className="relative h-[70vh] xl:h-[75vh] w-[90%] xl:w-[65%] sm:w-[70%] overflow-hidden flex justify-center ">
-                        <Image
-                          className="transform scale-[1.3] -translate-y-3"
-                          layout="fill"
-                          objectFit="cover"
-                          src={featureImage.url}
-                          alt=""
-                        />
+                    <div className="relative flex justify-center w-full">
+                      <div className="w-full overflow-hidden with-parallax">
+                        <div className="relative w-full z-30 h-[900px] ">
+                          <Image
+                            layout="fill"
+                            objectFit="cover"
+                            priority
+                            className="transform scale-[1.3] -translate-y-7 w-full h-full"
+                            src={featureImage.url}
+                            alt=""
+                          />
+                          <Image
+                            layout="fill"
+                            src="/images/shadow-kit.webp"
+                            className=" top-0 w-full z-30 h-full opacity-20"
+                          />
+                        </div>
                       </div>
                       <p
                         className={`absolute -bottom-4 ${

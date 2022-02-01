@@ -204,7 +204,7 @@ export default function ProjectDetails({
                 layout="fill"
                 objectFit="cover"
                 priority
-                className="transform scale-[1.3]  -translate-y-7 w-full h-full"
+                className="transform scale-[1.3] -translate-y-7 w-full h-full"
                 src={featureImage.url}
                 alt=""
               />
