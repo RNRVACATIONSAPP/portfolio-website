@@ -8,8 +8,6 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectsSection({ project }) {
-  // ADD PARALLAX TO IMAGES
-  useParallax();
 
   return (
     <section data-scroll-section className="w-screen min-h-screen bg-[#f2f2f2]">
@@ -75,12 +73,12 @@ function ProjectsSection({ project }) {
                       title === "Eva Eik"
                         ? "pt-[10vw]"
                         : "bg-[#f93700] sm:bg-[#dad6cd] text-white"
-                    }  place-items-center with-parallax h-full w-full md:w-1/2 mx-auto  p-[5vw] sm:p-0 `}
+                    }  place-items-center  h-full w-full md:w-1/2 mx-auto  p-[5vw] sm:p-0 `}
                   >
-                    <div className="relative flex justify-center w-full">
+                    <div className="relative with-parallax flex justify-center w-full">
                       <div className="relative h-[70vh] xl:h-[75vh] w-[90%] xl:w-[65%] sm:w-[70%] overflow-hidden flex justify-center ">
                         <Image
-                          className="h-full w-full transform scale-[1.3] -translate-y-3"
+                          className="transform scale-[1.3] -translate-y-3"
                           layout="fill"
                           objectFit="cover"
                           src={featureImage.url}
