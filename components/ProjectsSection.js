@@ -5,6 +5,7 @@ const { ScrollTrigger } = require("gsap/dist/ScrollTrigger");
 
 import useParallax from "../hooks/useParallax";
 import Image from "next/image";
+import { LinkIcon } from "@heroicons/react/solid";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,6 +63,7 @@ function ProjectsSection({ project }) {
               id,
               siteUrl,
               tags,
+              slug,
               shortDescription,
             }) {
               const projectTags = tags.split(" ");
@@ -74,9 +76,9 @@ function ProjectsSection({ project }) {
                   <div
                     className={`flex flex-col justify-center ${
                       title === "Eva Eik"
-                        ? "pt-[10vw]"
+                        ? ""
                         : "bg-[#f93700] sm:bg-[#dad6cd] text-white"
-                    }  place-items-center with-parallax h-full w-full md:w-1/2 mx-auto  p-[5vw] sm:p-0 `}
+                    }  place-items-center with-parallax h-full w-full md:w-1/2 mx-auto pt-[10vw] p-[5vw] sm:p-0 `}
                   >
                     <div className="relative flex justify-center w-full">
                       <div className="relative h-[70vh] xl:h-[75vh] w-[90%] xl:w-[65%] sm:w-[70%] overflow-hidden flex justify-center ">
@@ -109,13 +111,12 @@ function ProjectsSection({ project }) {
                           <p className="text-sm leading-[1.6] py-[30px] sm:p-0 sm:w-[40%]">
                             {shortDescription}
                           </p>
-                          <a
-                            href={siteUrl}
-                            className=" font-GTWalsheim text-3xl underline mb-5 font-medium"
-                          >
-                            Visit the site
-                            <span className=" font-extralight">+</span>
+                          <Link href={`/projects/${slug}`}>
+                          <a className=" font-GTWalsheim text-3xl underline mb-5 font-medium">
+                            Check full case
+                            <span className="font-extralight">+</span>
                           </a>
+                        </Link>
                         </div>
                       </div>
                     </div>
@@ -129,7 +130,7 @@ function ProjectsSection({ project }) {
                   >
                     <div className="flex justify-center place-items-center w-1/2 ">
                       <ul className="font-GTWalsheim leading-[0.68] font-light block">
-                        <li className="hidden sm:flex text-black absolute left-[55%] transform -translate-x-[55%]  text-[15vw] md:text-[10.5vw] w-[15vw] flex-shrink-0 ">
+                        <li className="hidden lg:flex text-black absolute left-[55%] transform -translate-x-[55%]  text-[15vw] md:text-[10.5vw] w-[15vw] flex-shrink-0 ">
                           {title[0]}
                           <span className="dot">.</span>
                         </li>
@@ -143,14 +144,12 @@ function ProjectsSection({ project }) {
                           {shortDescription}
                         </p>
                         <span className="text-xs pb-11"></span>
-                        <a
-                          href={siteUrl}
-                          target="_blank"
-                          className=" font-GTWalsheim text-3xl underline mb-5 font-medium"
-                        >
-                          Visit the site
-                          <span className="font-extralight">+</span>
-                        </a>
+                        <Link href={`/projects/${slug}`}>
+                          <a className=" font-GTWalsheim text-3xl underline mb-5 font-medium">
+                            Check full case
+                            <span className="font-extralight">+</span>
+                          </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

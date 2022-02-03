@@ -49,6 +49,8 @@ function projects({ project }) {
       setScrollPos(menuItems.current.scrollHeight - clonesHeight);
     }
   };
+
+  
   useEffect(() => {
     const ref = menuItems.current;
     ref.style.scrollBehavior = "unset";

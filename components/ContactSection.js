@@ -4,10 +4,10 @@ function ContactSection({ brownBg }) {
       data-scroll
       data-scroll-section
       className={`section flex flex-col justify-center h-screen w-screen ${
-        brownBg ? "bg-[#dad6cd]" : "bg-[#f2f2f2]"
+        brownBg ? "bg-[#dad6cd]" : "bg-[#ac9494]"
       }`}
     >
-      <div className="text-[8vw] tracking-normal leading-[1.1] font-bold text-left font-SchnyderL  w-full h-full flex flex-col justify-center place-items-center ">
+      <div className="text-[8vw] tracking-normal leading-[1.1] font-bold text-left font-SchnyderL w-full h-full flex flex-col justify-center place-items-center ">
         <div className="flex justify-between w-screen px-[6vw] py-[1vw]">
           Let’s make <i className="text-white">something</i> great!
         </div>
@@ -61,7 +61,7 @@ function ContactSection({ brownBg }) {
           <div>Collaborations.</div>
         </div>
       </div>
-      <ul className="flex my-container space-x-32 font-SchnyderL text-lg">
+      <ul className="flex my-container space-x-10 xs:space-x-32 font-SchnyderL text-lg">
         <li>
           <a
             target="_blank"

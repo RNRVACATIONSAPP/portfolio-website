@@ -11,7 +11,7 @@ import ContactSection from "../components/ContactSection";
 
 export default function Home({project}) {
   const [preloader, setPreloader] = useState(true);
-  
+
 
   return (
     <div className="h-full">

@@ -189,17 +189,17 @@ export default function ProjectDetails({
       </header>
       <section
         data-scroll-section
-        className="relative min-h-screen  flex flex-col z-30 w-full"
+        className="relative flex flex-col z-30 w-full"
       >
         <div className="w-full flex justify-start items-start my-container pb-[6vw] ">
           <span className="w-1/2"></span>
-          <p className="text-sm leading-[1.6] pl-[15vw] w-[50%]">
+          <p className="text-sm leading-[1.6] pl-[15vw] w-full sm:w-[40%]">
             {shortDescription}
           </p>
         </div>
         {featureImage && (
           <div className="w-full overflow-hidden with-parallax">
-            <div className="relative w-full z-30 h-[900px] ">
+            <div className="relative w-full z-30 h-[70vw] sm:h-[64vw] ">
               <Image
                 layout="fill"
                 objectFit="cover"
@@ -219,10 +219,9 @@ export default function ProjectDetails({
       </section>
       <section
         data-scroll-section
-        className="relative section py-0 h-auto my-container"
+        className="relative section py-5 h-auto my-container"
       >
-        <div className="relative shadow-xl  transform-container transform overflow-hidden place-items-center bg-black max-w-[900px] h-auto lg:mx-auto my-[5%] ">
-          {/* <img className="absolute z-20 h-full w-full opacity-[0.02]" src="/images/grain-anim.gif" alt="" /> */}
+        <div className="relative shadow-xl  transform-container transform overflow-hidden place-items-center bg-black  sm:w-[73%] h-auto mx-auto my-[5vh] sm:my-[5%] ">
           {projectAssets[1] ? (
             <video
               autoPlay
@@ -238,8 +237,20 @@ export default function ProjectDetails({
             />
           )}
         </div>
-        {description && <p>{description}</p>}
-        <div className="transform-container shadow-xl  transform overflow-hidden place-items-center bg-black relative max-w-[900px] h-auto lg:mx-auto my-[5%] ">
+        {description && (
+          <div className="flex flex-col sm:flex-row w-4/5 mx-auto py-32">
+            <div className="flex sm:w-1/2">
+              <h2 className="ml-auto font-GTWalsheim leading-tight tracking-normal font-medium text-lg pb-[5vw] sm:pb-0 sm:w-[35%]">
+                The key feature of the website is its modular jewelry builder
+                created to address customers’ evolving needs.
+              </h2>
+            </div>
+            <div className="flex justify-center sm:w-1/2">
+              <p className="sm:w-[50%] text-sm">{description}</p>
+            </div>
+          </div>
+        )}
+        <div className="transform-container shadow-xl  transform overflow-hidden place-items-center bg-black relative sm:w-[73%] h-auto mx-auto lg:mx-auto my-[5vh] sm:my-[5%] ">
           <img
             className="transform-image  w-full h-full"
             src={projectAssets[0].url}
@@ -257,7 +268,7 @@ export default function ProjectDetails({
                 layout="fill"
                 objectFit="cover"
                 priority
-                className="transform scale-[1.3]  -translate-y-7 w-full h-full"
+                className="transform scale-[1.3] -translate-y-7 w-full h-full"
                 src={featureImage.url}
                 alt=""
               />
@@ -266,7 +277,7 @@ export default function ProjectDetails({
                 src="/images/shadow-kit.webp"
                 className=" top-0 w-full z-30 h-full opacity-20"
               />
-              <div className="transform-container shadow-xl  mx-5 transform overflow-hidden place-items-center bg-black relative max-w-[900px] h-auto md:mx-auto my-[5%] ">
+              <div className="transform-container shadow-xl mx-5 transform overflow-hidden place-items-center bg-black relative max-w-[900px] h-auto md:mx-auto my-[5%] ">
                 <img
                   className="transform-image w-full h-full"
                   src={projectAssets[0].url}
@@ -276,8 +287,11 @@ export default function ProjectDetails({
           </div>
         )}
       </section>
-      <section data-scroll-section className="h-screen flex">
-        <div className="relative h-full w-1/2 bg-[#dbd5c9]">
+      <section
+        data-scroll-section
+        className="h-screen flex flex-col sm:flex-row"
+      >
+        <div className="relative h-full sm:w-1/2 bg-[#dbd5c9]">
           <div className="transform-container mx-20 shadow-xl transform -translate-y-1/2 overflow-hidden place-items-center bg-black absolute top-[50%] max-w-[900px] h-auto ">
             <img
               className="transform-image w-full h-full"
@@ -285,8 +299,8 @@ export default function ProjectDetails({
             />
           </div>
         </div>
-        <div className="flex flex-col justify-center place-items-center h-full w-1/2  ">
-          <h2 className="font-GTWalsheim w-1/2 pb-14 pr-20 text-lg  leading-tight tracking-normal font-medium">
+        <div className="flex flex-col justify-center place-items-center h-full sm:w-1/2  ">
+          <h2 className="font-GTWalsheim w-1/2 pb-14 pr-20 text-lg leading-tight tracking-normal font-medium">
             The website is built using a unique stack of technologies to enable
             custom animations and transitions between the pages.
           </h2>
