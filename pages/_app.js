@@ -85,7 +85,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <main data-scroll-container className="scroll-container fixed w-screen">
-      <div className="fixed prevminusIndex z-50 h-screen w-screen opacity-[80%] mix-blend-soft-light pointer-events-none">
+      <div className="fixed prevminusIndex z-50 h-screen w-screen opacity-[100%] mix-blend-soft-light pointer-events-none">
         <Image
           src="/images/Film-Grain.png"
           layout="fill"

@@ -32,7 +32,7 @@ function Hero(props) {
             <div
               data-scroll
               data-scroll-speed="2"
-              className="flex justify-center place-items-center w-full  flex-1 relative bg-[#dad6cd]"
+              className="flex justify-center place-items-center w-full flex-1 relative bg-[#dad6cd]"
             >
               <img
                 className=" heroImageDimensions relative left-[48%] xs:left-[9.5em] md:left-[15em] lg:left-[9.5em] shadow-2xl object-cove pointer-events-none"

@@ -5,7 +5,7 @@ function About(props) {
     <section
       data-scroll-section
       id="about"
-      className="section z-[2] pt-[90px]  bg-[#f2f2f2] relative"
+      className="section z-[2] pt-[90px] bg-[#f2f2f2] relative"
     >
       <article className="my-container">
         <div className="flex justify-between place-items-center flex-col lg:flex-row max-w-xl sm:max-w-2xl lg:max-w-6xl mx-auto">

@@ -5,7 +5,7 @@ const { ScrollTrigger } = require("gsap/dist/ScrollTrigger");
 
 import useParallax from "../hooks/useParallax";
 import Image from "next/image";
-import { LinkIcon } from "@heroicons/react/solid";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
